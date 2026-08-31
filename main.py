@@ -1,6 +1,8 @@
 print("")
 print("===== CALCULADORA BASICA =====")
-print("=====        V1.2        =====")
+print("=====        V1.3        =====")
+
+historico = []
 
 while True:
 
@@ -11,6 +13,7 @@ while True:
     print("2 - Subtração")
     print("3 - Multiplicação")
     print("4 - Divisão")
+    print("5 - Histórico")
 
     print("")
     operacao = input("Opção: ")
@@ -19,6 +22,12 @@ while True:
     #Fechar calculadora
     if operacao == "0":
         break
+
+    #Função do Hitórico
+    elif operacao == "5":
+        for item in historico:
+            print(item)
+        continue
 
     #input dos valores a serem calculados
     try:
@@ -37,18 +46,21 @@ while True:
         resultado = numero1 + numero2
         print("")
         print("Resultado:", resultado)
+        historico.append(f"{numero1} + {numero2} = {resultado}")
 
     #Função de Subtração
     elif operacao == "2":
         resultado = numero1 - numero2
         print("")
         print("Resultado:", resultado)
+        historico.append(f"{numero1} - {numero2} = {resultado}")
 
     #Função de Multiplicação
     elif operacao == "3":
         resultado = numero1 * numero2
         print("")
         print("Resultado:", resultado)
+        historico.append(f"{numero1} x {numero2} = {resultado}")
 
     #Função de Divisão
     elif operacao == "4":
@@ -60,6 +72,9 @@ while True:
             resultado = numero1 / numero2
             print("")
             print("Resultado:", resultado)
+            historico.append(f"{numero1} ÷ {numero2} = {resultado}")
+
+        
 
     #msg de erro
     else:
