@@ -4,7 +4,7 @@ Projeto desenvolvido em Python com o objetivo de praticar lógica de programaç�
 
 ## 📌 Sobre o projeto
 
-Esta é uma calculadora executada pelo terminal, desenvolvida de forma incremental, com novas funcionalidades adicionadas a cada versão.
+Esta é uma calculadora executada pelo terminal, desenvolvida de forma incremental, com novas funcionalidades e melhorias de organização adicionadas a cada versão.
 
 O projeto faz parte do meu portfólio de estudos em programação.
 
@@ -20,8 +20,10 @@ O projeto faz parte do meu portfólio de estudos em programação.
 * 🗑️ Limpeza do histórico
 * ✅ Confirmação antes de apagar o histórico
 * 📦 Operações matemáticas separadas em um módulo
-* 🧩 Funções para organização do código
-* 🔢 Função para entrada e validação dos números
+* 🔧 Funções para organização do código
+* 🔢 Função específica para entrada dos números
+* 🧮 Função específica para realização dos cálculos
+* 🔣 Função específica para identificação do símbolo da operação
 
 ## 📂 Estrutura do projeto
 
@@ -45,7 +47,9 @@ Responsável pelo funcionamento principal da calculadora, incluindo:
 * Histórico
 * Tratamento de erros
 * Controle do programa
-* Funções auxiliares para organização do código
+* Funções de organização do código
+* Realização dos cálculos
+* Formatação do histórico
 
 ### `calculos.py`
 
@@ -66,27 +70,39 @@ Contém as funções responsáveis pelas operações matemáticas:
 
 ## 📋 Versões
 
+### V2.0
+
+* Criação da função `input_numero()` para entrada dos números
+* Criação da função `realizar_calculo()` para centralizar a realização dos cálculos
+* Criação da função `simbolo_operacao()` para identificar o símbolo da operação
+* Organização das responsabilidades em funções
+* Validação da opção escolhida antes da entrada dos números
+* Tratamento de divisão por zero
+* Manutenção do histórico de cálculos
+* Melhoria na organização do `main.py`
+* Renomeação de `imput_numero()` para `input_numero()`
+
 ### V1.9
 
 * Criação da função `imput_numero()`
 * Separação da entrada dos números em uma função
-* Validação dos números dentro da função
-* Retorno dos números para o programa principal
-* Tratamento de erro utilizando retorno `None`
-* Organização e melhoria da estrutura do `main.py`
-* Manutenção das operações matemáticas
-* Manutenção do histórico de cálculos
-* Manutenção da limpeza do histórico com confirmação
+* Retorno dos números através da função
+* Tratamento de entradas inválidas
 
 ### V1.8
 
 * Criação da função `mostrar_historico()`
-* Passagem do histórico como parâmetro para a função
 * Criação da função `limpar_historico()`
-* Passagem do histórico como parâmetro para a função
-* Melhor organização das funções do programa
+* Organização das funções relacionadas ao histórico
+* Passagem do histórico como parâmetro para as funções
 
 ### V1.7
+
+* Criação da função `mostrar_menu()`
+* Separação do menu principal em uma função
+* Organização inicial do código em funções
+
+### V1.6
 
 * Operações matemáticas separadas no arquivo `calculos.py`
 * Criação de funções para soma, subtração, multiplicação e divisão
@@ -95,11 +111,6 @@ Contém as funções responsáveis pelas operações matemáticas:
 * Manutenção do histórico de cálculos
 * Tratamento de divisão por zero
 * Tratamento de entradas inválidas
-
-### V1.6
-
-* Separação das operações matemáticas em funções
-* Criação do módulo `calculos.py`
 
 ### V1.5
 
@@ -137,7 +148,7 @@ Contém as funções responsáveis pelas operações matemáticas:
 ## 🔮 Futuras atualizações
 
 * [ ] Melhorar a organização do `main.py`
-* [ ] Criar função para realizar os cálculos
+* [ ] Criar uma função principal `main()`
 * [ ] Melhorar a formatação dos resultados
 * [ ] Adicionar novas operações matemáticas
 * [ ] Permitir operações com mais de dois números

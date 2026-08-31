@@ -44,7 +44,7 @@ def limpar_historico(historico):
         print("\nOpção inválida!")
 
 #=====        Input dos Numeros        =====
-def imput_numero():
+def input_numero():
     try:
         numero1 = float(input("\nDigite o primeiro número: "))
         numero2 = float(input("Digite o segundo número: "))
@@ -57,9 +57,45 @@ def imput_numero():
 
         return None, None
 
+#=====        Calcular        =====
+def realizar_calculo(operacao, numero1, numero2):
+
+    #==============================ADIÇÃO==============================
+    if operacao == "1":
+        return calculos.somar(numero1, numero2)
+
+    #==============================SUBTRAÇÃO==============================
+    elif operacao == "2":
+        return calculos.subtrair(numero1, numero2)
+
+    #==============================MULTIPLICAÇÃO==============================
+    elif operacao == "3":
+        return calculos.multiplicar(numero1, numero2)
+
+    #==============================DIVISÃO==============================
+    elif operacao == "4":
+        return calculos.dividir(numero1, numero2)
+
+
+#=====        Símbolo da Operação        =====
+def simbolo_operacao(operacao):
+
+    if operacao == "1":
+        return "+"
+
+    elif operacao == "2":
+        return "-"
+
+    elif operacao == "3":
+        return "x"
+
+    elif operacao == "4":
+        return "÷"
+
+
 #==============================APRESENTAÇÃO==============================
 print("\n===== CALCULADORA BASICA =====")
-print("=====        V1.9        =====")
+print("=====        V2.0        =====")
 
 #==============================LISTA COM HISTÓRICO DE CALCULOS==============================
 historico = []
@@ -69,7 +105,7 @@ while True:
 
     mostrar_menu()
 
-    #==============================IMPUT DA OPÇÃO DE FUNÇÃO==============================
+    #==============================INPUT DA OPÇÃO DE FUNÇÃO==============================
     operacao = input("\nOpção: ")
 
     #==============================FECHAR A CALCULADORA==============================
@@ -84,7 +120,7 @@ while True:
         print("\n1 - Ver histórico")
         print("2 - Limpar Histórico")
 
-        #==============================IMPUT da OPÇÃO DO HISTÓRICO==============================
+        #==============================INPUT DA OPÇÃO DO HISTÓRICO==============================
         operacao2 = input("\nOpção: ")
 
         #==============================VISUALIZAR HISTÓRICO==============================
@@ -100,42 +136,31 @@ while True:
         #==============================OPÇÃO INVALIDA==============================
         else:
             print("\nOpção inválida!")
-            continue        
+            continue
 
-    #==============================IMPUT DOS VALORES A SEREM CALCULADOS==============================
-    numero1, numero2 = imput_numero()
+    #==============================VERIFICAÇÃO DA OPERAÇÃO==============================
+    if operacao not in ["1", "2", "3", "4"]:
+        print("\nOpção inválida!")
+        continue
 
-    #==============================TRATAMENTO DE ERRO NOS NUMEROS==============================
+    #==============================INPUT DOS NÚMEROS==============================
+    numero1, numero2 = input_numero()
+
+    #==============================TRATAMENTO DE ERRO NOS NÚMEROS==============================
     if numero1 is None:
         continue
 
-    #==============================ADIÇÃO==============================
-    if operacao == "1":
-        resultado = calculos.somar(numero1, numero2)
-        print("Resultado:", resultado)
-        historico.append(f"{numero1} + {numero2} = {resultado}")
+    #==============================TRATAMENTO DE DIVISÃO POR ZERO==============================
+    if operacao == "4" and numero2 == 0:
+        print("\nNão é possível dividir por zero")
+        continue
 
-    #==============================SUBTRAÇÃO==============================
-    elif operacao == "2":
-        resultado = calculos.subtrair(numero1, numero2)
-        print("Resultado:", resultado)
-        historico.append(f"{numero1} - {numero2} = {resultado}")
+    #==============================REALIZAR CÁLCULO==============================
+    resultado = realizar_calculo(operacao, numero1, numero2)
 
-    #==============================MULTIPLICAÇÃO==============================
-    elif operacao == "3":
-        resultado = calculos.multiplicar(numero1, numero2)
-        print("Resultado:", resultado)
-        historico.append(f"{numero1} x {numero2} = {resultado}")
+    #==============================EXIBIR RESULTADO==============================
+    print("Resultado:", resultado)
 
-    #==============================DIVISÃO==============================
-    elif operacao == "4":
-        if numero2 == 0:
-            print("\nNão é possível dividir por zero")
-        else:    
-            resultado = calculos.dividir(numero1, numero2)
-            print("Resultado:", resultado)
-            historico.append(f"{numero1} ÷ {numero2} = {resultado}")
-
-    #==============================MSG ERRO==============================
-    else:
-        print("\nOpção inválida!")
+    #==============================ADICIONAR AO HISTÓRICO==============================
+    simbolo = simbolo_operacao(operacao)
+    historico.append(f"{numero1} {simbolo} {numero2} = {resultado}")
