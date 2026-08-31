@@ -4,7 +4,7 @@ Calculadora básica desenvolvida em Python como parte do meu portfólio de progr
 
 ## 📌 Versão atual
 
-**1.5**
+**1.6**
 
 ## ⚙️ Funcionalidades
 
@@ -23,6 +23,8 @@ Calculadora básica desenvolvida em Python como parte do meu portfólio de progr
 * Verificação de histórico vazio
 * Visualização do histórico
 * Limpeza do histórico
+* Confirmação antes de limpar o histórico
+* Aceitação de letras maiúsculas e minúsculas na confirmação
 
 ## 🛠️ Tecnologias utilizadas
 
@@ -41,13 +43,13 @@ Calculadora básica desenvolvida em Python como parte do meu portfólio de progr
 3. Abra o terminal.
 4. Execute o comando:
 
-```bash id="xw5y0f"
+```bash
 python main.py
 ```
 
 ## 📂 Estrutura do projeto
 
-```text id="m2w5x8"
+```text
 calculadora-python/
 ├── .gitignore
 ├── LICENSE
@@ -61,8 +63,8 @@ calculadora-python/
 * [ ] Organizar o código utilizando funções
 * [ ] Adicionar novas operações matemáticas
 * [ ] Melhorar a apresentação dos resultados
-* [ ] Adicionar confirmação antes de limpar o histórico
 * [ ] Adicionar outras funcionalidades à calculadora
+* [ ] Adicionar confirmação para outras ações quando necessário
 
 ## 👨‍💻 Autor
 

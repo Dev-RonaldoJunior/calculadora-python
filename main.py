@@ -1,6 +1,6 @@
 print("")
 print("===== CALCULADORA BASICA =====")
-print("=====        V1.4        =====")
+print("=====        V1.6        =====")
 
 historico = []
 
@@ -43,12 +43,29 @@ while True:
             continue
 
         elif operacao2 == "2":
-            historico.clear()
-            print("Histórico Limpo.")
-            continue
+
+            print("Tem certeza que deseja apagar o histórico da calculadora?")
+            print("S para sim e N para Não")
+
+            operacao3 = input("Opção: ")
+
+            operacao3 = operacao3.upper()
+
+            if operacao3 == "S":
+                historico.clear()
+                print("Histórico Limpo.")
+                continue
+
+            elif operacao3 == "N":
+                print("Histórico não apagado")
+                continue
+
+            else:
+                print("Opção inválida!")
+                continue  
 
         else:
-            print("Opção invalida")
+            print("Opção inválida!")
             continue        
 
     #input dos valores a serem calculados
