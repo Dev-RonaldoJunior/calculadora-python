@@ -1,16 +1,9 @@
 #==============================IMPORT MODULADO==============================
 import calculos
 
-#==============================APRESENTAÇÃO==============================
-print("\n===== CALCULADORA BASICA =====")
-print("=====        V1.7        =====")
-
-#==============================LISTA COM HISTÓRICO DE CALCULOS==============================
-historico = []
-
-#==============================LOOP==============================
-while True:
-    #==============================FUNÇÕES DISPONIVEIS==============================
+#==============================FUNÇÕES==============================
+#=====        Mostrar Menu        =====
+def mostrar_menu():
     print("\nEscolha uma operação:")
     print("0 - Fechar Calculadora")
     print("1 - Soma")
@@ -18,6 +11,49 @@ while True:
     print("3 - Multiplicação")
     print("4 - Divisão")
     print("5 - Histórico")
+
+#=====        Mostrar Histórico       =====
+def mostrar_historico(historico):
+    if not historico:
+        print("\nNenhum cálculo realizado.")
+    
+    else:
+        for item in historico:
+            print(item)
+
+#=====        Limpar Histórico        =====
+def limpar_historico(historico):
+    print("\nTem certeza que deseja apagar o histórico da calculadora?")
+    print("S para sim e N para Não")
+    
+    operacao = input("Opção: ")
+    
+    operacao = operacao.upper()
+
+    #Positivo
+    if operacao == "S":
+        historico.clear()
+        print("Histórico Limpo.")
+
+    #Negativo
+    elif operacao == "N":
+        print("\nHistórico não apagado")
+
+    #Invalido
+    else:
+        print("\nOpção inválida!")
+
+#==============================APRESENTAÇÃO==============================
+print("\n===== CALCULADORA BASICA =====")
+print("=====        V1.8        =====")
+
+#==============================LISTA COM HISTÓRICO DE CALCULOS==============================
+historico = []
+
+#==============================LOOP==============================
+while True:
+
+    mostrar_menu()
 
     #==============================IMPUT DA OPÇÃO DE FUNÇÃO==============================
     operacao = input("\nOpção: ")
@@ -39,42 +75,14 @@ while True:
 
         #==============================VISUALIZAR HISTÓRICO==============================
         if operacao2 == "1":
-            #==============================HISTÓRICO VAZIO==============================
-            if not historico:
-                print("\nNenhum cálculo realizado.")
-
-            #==============================LIMPANDO HISTÓRICO==============================
-            else:
-                for item in historico:
-                    print(item)
-            
+            mostrar_historico(historico)
             continue
 
         #==============================APAGAR HISTÓRICO==============================
         elif operacao2 == "2":
             #==============================SUB MENU DE CONFIRMAÇÃO==============================
-            print("\nTem certeza que deseja apagar o histórico da calculadora?")
-            print("S para sim e N para Não")
-
-            operacao3 = input("Opção: ")
-
-            operacao3 = operacao3.upper()
-
-            #==============================CONFIRMAÇÂO POSITIVA==============================
-            if operacao3 == "S":
-                historico.clear()
-                print("Histórico Limpo.")
-                continue
-
-            #==============================CONFIRMAÇÃO NEGATIVA==============================
-            elif operacao3 == "N":
-                print("\nHistórico não apagado")
-                continue
-
-            #==============================CONFIRMAÇÃO INVALIDA==============================
-            else:
-                print("\nOpção inválida!")
-                continue  
+            limpar_historico(historico)
+            continue
 
         #==============================SUB MENU DE CONFIRMAÇÃO OPÇÃO INVALIDA==============================
         else:
