@@ -21,18 +21,35 @@ while True:
 
     #Fechar calculadora
     if operacao == "0":
+        print("Calculadora encerrada")
         break
 
     #Função do Hitórico
     elif operacao == "5":
-        if not historico:
-            print("Nenhum cálculo realizado.")
+
+        print("1 - Ver histórico")
+        print("2 - Limpar Histórico")
+
+        operacao2 = input("Opção: ")
+
+        if operacao2 == "1":
+            if not historico:
+                print("Nenhum cálculo realizado.")
+            
+            else:
+                for item in historico:
+                    print(item)
+            
+            continue
+
+        elif operacao2 == "2":
+            historico.clear()
+            print("Histórico Limpo.")
+            continue
 
         else:
-            for item in historico:
-                print(item)
-
-        continue
+            print("Opção invalida")
+            continue        
 
     #input dos valores a serem calculados
     try:
