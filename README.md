@@ -1,73 +1,138 @@
-# 🧮 Calculadora Python
+# 🧮 Calculadora Básica em Python
 
-Calculadora básica desenvolvida em Python como parte do meu portfólio de programação.
+Projeto desenvolvido em Python com o objetivo de praticar lógica de programação, estruturas de repetição, condicionais, tratamento de erros, listas, funções e modularização.
 
-## 📌 Versão atual
+## 📌 Sobre o projeto
 
-**1.6**
+Esta é uma calculadora executada pelo terminal, desenvolvida de forma incremental, com novas funcionalidades adicionadas a cada versão.
 
-## ⚙️ Funcionalidades
+O projeto faz parte do meu portfólio de estudos em programação.
+
+## 🚀 Funcionalidades
+
+* ➕ Soma
+* ➖ Subtração
+* ✖️ Multiplicação
+* ➗ Divisão
+* 🛑 Tratamento de divisão por zero
+* ⚠️ Tratamento de entradas inválidas
+* 📋 Histórico de cálculos
+* 🗑️ Limpeza do histórico
+* ✅ Confirmação antes de apagar o histórico
+* 📦 Operações matemáticas separadas em um módulo
+
+## 📂 Estrutura do projeto
+
+```text
+calculadora/
+│
+├── main.py
+├── calculos.py
+├── README.md
+├── .gitignore
+└── LICENSE
+```
+
+### `main.py`
+
+Responsável pelo funcionamento principal da calculadora, incluindo:
+
+* Menu de opções
+* Entrada dos dados
+* Histórico
+* Tratamento de erros
+* Controle do programa
+
+### `calculos.py`
+
+Contém as funções responsáveis pelas operações matemáticas:
+
+* `somar()`
+* `subtrair()`
+* `multiplicar()`
+* `dividir()`
+
+## 🛠️ Tecnologias utilizadas
+
+* Python
+* Visual Studio Code
+* Git
+* GitHub
+* GitHub Desktop
+
+## 📋 Versões
+
+### V1.7
+
+* Operações matemáticas separadas no arquivo `calculos.py`
+* Criação de funções para soma, subtração, multiplicação e divisão
+* Utilização de `import` para acessar o módulo de cálculos
+* Organização do código em arquivos separados
+* Manutenção do histórico de cálculos
+* Tratamento de divisão por zero
+* Tratamento de entradas inválidas
+
+### V1.6
+
+* Separação das operações matemáticas em funções
+* Criação do módulo `calculos.py`
+
+### V1.5
+
+* Confirmação antes de limpar o histórico
+* Opções para confirmar ou cancelar a exclusão
+
+### V1.4
+
+* Opção para limpar o histórico
+* Submenu de histórico
+
+### V1.3
+
+* Visualização do histórico
+* Mensagem quando não existem cálculos registrados
+
+### V1.2
+
+* Criação do histórico de cálculos
+
+### V1.1
+
+* Tratamento de entradas inválidas
+* Tratamento de divisão por zero
+
+### V1.0
 
 * Soma
 * Subtração
 * Multiplicação
 * Divisão
-* Entrada de dois números
-* Menu para escolha da operação
-* Verificação de opção inválida
-* Possibilidade de realizar vários cálculos sem reiniciar o programa
-* Opção para fechar a calculadora
-* Tratamento de valores inválidos
-* Proteção contra divisão por zero
-* Histórico dos cálculos realizados
-* Verificação de histórico vazio
-* Visualização do histórico
-* Limpeza do histórico
-* Confirmação antes de limpar o histórico
-* Aceitação de letras maiúsculas e minúsculas na confirmação
+* Menu de operações
+* Encerramento da calculadora
 
-## 🛠️ Tecnologias utilizadas
+## 🔮 Futuras atualizações
 
-* Python
+* [ ] Melhorar a organização do `main.py`
+* [ ] Criar funções para os menus
+* [ ] Melhorar a formatação dos resultados
+* [ ] Adicionar novas operações matemáticas
+* [ ] Permitir operações com mais de dois números
+* [ ] Melhorar o sistema de histórico
+* [ ] Criar uma interface gráfica
+* [ ] Adicionar testes automatizados
 
 ## ▶️ Como executar
 
-### Pré-requisitos
+É necessário ter o Python instalado.
 
-É necessário ter o **Python** instalado no computador.
-
-### Execução
-
-1. Clone este repositório.
-2. Abra a pasta do projeto no VS Code.
-3. Abra o terminal.
-4. Execute o comando:
+Clone o repositório, abra a pasta no VS Code e execute:
 
 ```bash
 python main.py
 ```
 
-## 📂 Estrutura do projeto
-
-```text
-calculadora-python/
-├── .gitignore
-├── LICENSE
-├── README.md
-└── main.py
-```
-
-## 🔮 Futuras atualizações
-
-* [ ] Melhorar a interface do terminal
-* [ ] Organizar o código utilizando funções
-* [ ] Adicionar novas operações matemáticas
-* [ ] Melhorar a apresentação dos resultados
-* [ ] Adicionar outras funcionalidades à calculadora
-* [ ] Adicionar confirmação para outras ações quando necessário
-
 ## 👨‍💻 Autor
 
 **Ronaldo José da Silva Junior**
 
-Projeto desenvolvido para fins de aprendizado e portfólio.
+Projeto desenvolvido para estudos e construção de portfólio.
