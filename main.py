@@ -1,39 +1,46 @@
 print("===== CALCULADORA BASICA =====")
-print("=====      1ª Versão     =====")
+print("=====        V1.1        =====")
 
-#entrada dos valores a ser calculados
-numero1 = float(input("Digite o primeiro número: "))
-numero2 = float(input("Digite o segundo número: "))
+while True:
 
-#Escolha da função
-print("\nEscolha uma operação:")
-print("1 - Soma")
-print("2 - Subtração")
-print("3 - Multiplicação")
-print("4 - Divisão")
+    #Escolha da função
+    print("\nEscolha uma operação:")
+    print("0 - Fechar Calculadora")
+    print("1 - Soma")
+    print("2 - Subtração")
+    print("3 - Multiplicação")
+    print("4 - Divisão")
 
-operacao = input("Opção: ")
+    operacao = input("Opção: ")
 
-#Função de Soma
-if operacao == "1":
-    resultado = numero1 + numero2
-    print("Resultado:", resultado)
+    #Fechar calculadora
+    if operacao == "0":
+        break
 
-#Função de Subtração
-elif operacao == "2":
-    resultado = numero1 - numero2
-    print("Resultado:", resultado)
+    #input dos valores a serem calculados
+    numero1 = float(input("Digite o primeiro número: "))
+    numero2 = float(input("Digite o segundo número: "))
 
-#Função de multiplicação
-elif operacao == "3":
-    resultado = numero1 * numero2
-    print("Resultado:", resultado)
+    #Função de Soma
+    if operacao == "1":
+        resultado = numero1 + numero2
+        print("Resultado:", resultado)
 
-#Função de divisão
-elif operacao == "4":
-    resultado = numero1 / numero2
-    print("Resultado:", resultado)
+    #Função de Subtração
+    elif operacao == "2":
+        resultado = numero1 - numero2
+        print("Resultado:", resultado)
 
-#msg de erro
-else:
-    print("Opção inválida!")
+    #Função de Multiplicação
+    elif operacao == "3":
+        resultado = numero1 * numero2
+        print("Resultado:", resultado)
+
+    #Função de Divisão
+    elif operacao == "4":
+        resultado = numero1 / numero2
+        print("Resultado:", resultado)
+
+    #msg de erro
+    else:
+        print("Opção inválida!")
