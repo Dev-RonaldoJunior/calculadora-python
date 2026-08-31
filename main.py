@@ -1,5 +1,6 @@
+print("")
 print("===== CALCULADORA BASICA =====")
-print("=====        V1.1        =====")
+print("=====        V1.2        =====")
 
 while True:
 
@@ -11,36 +12,56 @@ while True:
     print("3 - Multiplicação")
     print("4 - Divisão")
 
+    print("")
     operacao = input("Opção: ")
+    print("")
 
     #Fechar calculadora
     if operacao == "0":
         break
 
     #input dos valores a serem calculados
-    numero1 = float(input("Digite o primeiro número: "))
-    numero2 = float(input("Digite o segundo número: "))
+    try:
+        numero1 = float(input("Digite o primeiro número: "))
+        numero2 = float(input("Digite o segundo número: "))
+
+    except:
+        print("")
+        print("Valor digitado invalido")
+        print("Digite apenas numeros")
+        print("")
+        continue
 
     #Função de Soma
     if operacao == "1":
         resultado = numero1 + numero2
+        print("")
         print("Resultado:", resultado)
 
     #Função de Subtração
     elif operacao == "2":
         resultado = numero1 - numero2
+        print("")
         print("Resultado:", resultado)
 
     #Função de Multiplicação
     elif operacao == "3":
         resultado = numero1 * numero2
+        print("")
         print("Resultado:", resultado)
 
     #Função de Divisão
     elif operacao == "4":
-        resultado = numero1 / numero2
-        print("Resultado:", resultado)
+
+        if numero2 == 0:
+            print("")
+            print("Não é possível dividir por zero")
+        else:
+            resultado = numero1 / numero2
+            print("")
+            print("Resultado:", resultado)
 
     #msg de erro
     else:
+        print("")
         print("Opção inválida!")
