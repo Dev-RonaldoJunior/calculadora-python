@@ -43,9 +43,23 @@ def limpar_historico(historico):
     else:
         print("\nOpção inválida!")
 
+#=====        Input dos Numeros        =====
+def imput_numero():
+    try:
+        numero1 = float(input("\nDigite o primeiro número: "))
+        numero2 = float(input("Digite o segundo número: "))
+
+        return numero1, numero2
+
+    except:
+        print("\nValor digitado invalido")
+        print("Digite apenas numeros")
+
+        return None, None
+
 #==============================APRESENTAÇÃO==============================
 print("\n===== CALCULADORA BASICA =====")
-print("=====        V1.8        =====")
+print("=====        V1.9        =====")
 
 #==============================LISTA COM HISTÓRICO DE CALCULOS==============================
 historico = []
@@ -80,23 +94,19 @@ while True:
 
         #==============================APAGAR HISTÓRICO==============================
         elif operacao2 == "2":
-            #==============================SUB MENU DE CONFIRMAÇÃO==============================
             limpar_historico(historico)
             continue
 
-        #==============================SUB MENU DE CONFIRMAÇÃO OPÇÃO INVALIDA==============================
+        #==============================OPÇÃO INVALIDA==============================
         else:
             print("\nOpção inválida!")
             continue        
 
-    #==============================IMPUT DOS VALORES A SEREM CALCULADOS==============================(COM TRATAMENTO DE ERROS "try e except")
-    try:
-        numero1 = float(input("\nDigite o primeiro número: "))
-        numero2 = float(input("Digite o segundo número: "))
+    #==============================IMPUT DOS VALORES A SEREM CALCULADOS==============================
+    numero1, numero2 = imput_numero()
 
-    except:
-        print("\nValor digitado invalido")
-        print("Digite apenas numeros")
+    #==============================TRATAMENTO DE ERRO NOS NUMEROS==============================
+    if numero1 is None:
         continue
 
     #==============================ADIÇÃO==============================
