@@ -1,6 +1,6 @@
 print("")
 print("===== CALCULADORA BASICA =====")
-print("=====        V1.3        =====")
+print("=====        V1.4        =====")
 
 historico = []
 
@@ -25,8 +25,13 @@ while True:
 
     #Função do Hitórico
     elif operacao == "5":
-        for item in historico:
-            print(item)
+        if not historico:
+            print("Nenhum cálculo realizado.")
+
+        else:
+            for item in historico:
+                print(item)
+
         continue
 
     #input dos valores a serem calculados

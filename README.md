@@ -4,7 +4,7 @@ Calculadora básica desenvolvida em Python como parte do meu portfólio de progr
 
 ## 📌 Versão atual
 
-**1.3**
+**1.4**
 
 ## ⚙️ Funcionalidades
 
@@ -20,6 +20,7 @@ Calculadora básica desenvolvida em Python como parte do meu portfólio de progr
 * Tratamento de valores inválidos
 * Proteção contra divisão por zero
 * Histórico dos cálculos realizados
+* Mensagem quando o histórico está vazio
 
 ## 🛠️ Tecnologias utilizadas
 
@@ -54,11 +55,11 @@ calculadora-python/
 
 ## 🔮 Futuras atualizações
 
-* [ ] Informar quando o histórico estiver vazio
 * [ ] Melhorar a interface do terminal
 * [ ] Organizar o código utilizando funções
 * [ ] Adicionar novas operações matemáticas
 * [ ] Adicionar opção para limpar o histórico
+* [ ] Melhorar a apresentação dos resultados
 
 ## 👨‍💻 Autor
 
