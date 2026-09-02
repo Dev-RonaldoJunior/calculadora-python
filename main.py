@@ -66,23 +66,25 @@ def menu_historico(historico):
                     
 #=====        Input do Número1        =====
 def input_numero1():
-    try:
-        numero1 = float(input("\nDigite o primeiro número: "))
-        return numero1
-    except:
-        print("\nValor digitado invalido!")
-        print("Digite apenas numero.")
-        return None
+    while True:
+        try:
+            numero1 = float(input("\nDigite o primeiro número: "))
+            return numero1
 
+        except:
+            print("\nValor digitado invalido!")
+            print("Digite apenas numero.")
+        
 #=====        Input do Número2        =====
 def input_numero2():
-    try:
-        numero2 = float(input("\nDigite o segundo número: "))
-        return numero2
-    except:
-        print("\nValor digitado invalido!")
-        print("Digite apenas numero.")
-        return None
+    while True:
+        try:
+            numero2 = float(input("\nDigite o segundo número: "))
+            return numero2
+        except:
+            print("\nValor digitado invalido!")
+            print("Digite apenas numero.")
+
 #=====        Calcular        =====
 def realizar_calculo(operacao, numero1, numero2):
 
@@ -129,7 +131,7 @@ def validar_operacao(operacao):
 def main():
     #==============================APRESENTAÇÃO==============================
     print("\n===== CALCULADORA BASICA =====")
-    print("=====        V2.4        =====")
+    print("=====        V2.5        =====")
 
     #==============================LISTA PARA HISTÓRICO DE CALCULOS==============================
     historico = []
@@ -161,10 +163,6 @@ def main():
         numero1 = input_numero1()
         numero2 = input_numero2()
 
-        #==============================TRATAMENTO DE ERRO NOS NÚMEROS==============================
-        if numero1 is None or numero2 is None:
-            continue
-
         #==============================TRATAMENTO DE DIVISÃO POR ZERO==============================
         if operacao == "4" and numero2 == 0:
             print("\nNão é possível dividir por zero")
@@ -179,6 +177,10 @@ def main():
         #==============================ADICIONAR AO HISTÓRICO==============================
         simbolo = simbolo_operacao(operacao)
         historico.append(f"{numero1} {simbolo} {numero2} = {resultado}")
+
+#=======================================================================================================================================================#
+#=================================================================CALCULADORA FUNCIONANDO===============================================================#
+#=======================================================================================================================================================#
 
 if __name__ == "__main__":
     main()

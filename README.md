@@ -163,6 +163,16 @@ Contém as funções responsáveis pelas operações matemáticas:
 * Melhoria no tratamento de valores inválidos
 * Organização da entrada de dados em funções específicas
 
+### V2.5
+
+* Implementação de repetição da entrada de números inválidos
+* Utilização de `while` nas funções `input_numero1()` e `input_numero2()`
+* Tratamento de erros através de `try/except`
+* O programa continua solicitando o número até que um valor válido seja informado
+* Remoção da necessidade de retornar `None` em caso de erro
+* Melhoria no fluxo de entrada dos números
+
+
 ## 🔮 Próximas versões
 
 * Melhorar a organização da `main()`
