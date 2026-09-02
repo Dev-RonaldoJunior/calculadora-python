@@ -77,7 +77,7 @@ def input_numero1():
 #=====        Input do Número2        =====
 def input_numero2():
     try:
-        numero2 = float(input("\nDigite o primeiro número: "))
+        numero2 = float(input("\nDigite o segundo número: "))
         return numero2
     except:
         print("\nValor digitado invalido!")
