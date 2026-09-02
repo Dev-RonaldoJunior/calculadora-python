@@ -4,9 +4,7 @@ Projeto desenvolvido para praticar conceitos de programação em Python, como l�
 
 ## 📌 Sobre o projeto
 
-Uma calculadora executada pelo terminal, desenvolvida de forma incremental, fazendo parte dos meus estudos e portfólio de programação.
-
-O projeto está sendo desenvolvido por versões, adicionando novas funcionalidades e melhorando a organização do código gradualmente.
+Uma calculadora executada pelo terminal, desenvolvida de forma incremental durante meus estudos de Python e utilizada como parte do meu portfólio.
 
 ## 🚀 Funcionalidades
 
@@ -20,11 +18,12 @@ O projeto está sendo desenvolvido por versões, adicionando novas funcionalidad
 * Visualização do histórico
 * Limpeza do histórico
 * Confirmação antes de apagar o histórico
-* Operações matemáticas separadas em um módulo
+* Operações matemáticas separadas em módulo
 * Funções para organização do código
-* Função principal `main()` para controlar a execução da calculadora
-* Menu de histórico separado em uma função própria
+* Função `main()`
+* Menu de histórico separado em função própria
 * Validação das operações matemáticas
+* Entrada dos números separada em funções próprias
 
 ## 📂 Estrutura do projeto
 
@@ -40,11 +39,11 @@ calculadora/
 
 ### `main.py`
 
-Responsável pelo fluxo principal da calculadora, menus, entrada de dados, histórico, tratamento de erros e controle da execução do programa.
+Responsável pelo fluxo principal da calculadora, menus, entrada de dados, histórico, tratamento de erros e execução do programa.
 
 ### `calculos.py`
 
-Responsável pelas operações matemáticas da calculadora:
+Contém as funções responsáveis pelas operações matemáticas:
 
 * `somar()`
 * `subtrair()`
@@ -72,7 +71,7 @@ Responsável pelas operações matemáticas da calculadora:
 
 ### V1.1
 
-* Tratamento de entradas inválidas
+* Tratamento de valores inválidos
 * Tratamento de divisão por zero
 
 ### V1.2
@@ -82,12 +81,12 @@ Responsável pelas operações matemáticas da calculadora:
 ### V1.3
 
 * Visualização do histórico
-* Mensagem quando o histórico está vazio
+* Mensagem para histórico vazio
 
 ### V1.4
 
 * Limpeza do histórico
-* Criação de submenu para o histórico
+* Criação do submenu de histórico
 
 ### V1.5
 
@@ -96,30 +95,29 @@ Responsável pelas operações matemáticas da calculadora:
 
 ### V1.6
 
-* Separação das operações matemáticas em `calculos.py`
-* Criação das funções matemáticas
+* Operações matemáticas separadas no arquivo `calculos.py`
+* Criação das funções de soma, subtração, multiplicação e divisão
 * Importação do módulo `calculos`
-* Separação da lógica em arquivos diferentes
+* Separação do projeto em arquivos
 
 ### V1.7
 
 * Criação da função `mostrar_menu()`
-* Organização do menu em uma função
+* Organização do menu em uma função própria
 * Melhoria na organização do código
 
 ### V1.8
 
-* Criação da função `mostrar_historico()`
-* Criação da função `limpar_historico()`
+* Criação das funções `mostrar_historico()` e `limpar_historico()`
 * Organização das funções relacionadas ao histórico
-* Passagem do histórico como parâmetro
+* Histórico passado como parâmetro
 
 ### V1.9
 
 * Criação da função `input_numero()`
-* Separação da entrada dos números em uma função
-* Retorno dos números para o fluxo principal
-* Tratamento de entradas inválidas
+* Separação da entrada dos números
+* Retorno dos números através da função
+* Tratamento de valores inválidos
 
 ### V2.0
 
@@ -127,48 +125,57 @@ Responsável pelas operações matemáticas da calculadora:
 * Criação da função `simbolo_operacao()`
 * Validação da operação antes da entrada dos números
 * Tratamento de divisão por zero
-* Organização do fluxo principal
-* Melhoria na formatação do histórico
-* Correção do nome da função `input_numero()`
+* Melhor organização do fluxo principal
+* Formatação do histórico de cálculos
+* Correção do nome `imput_numero()` para `input_numero()`
 
 ### V2.1
 
-* Criação da função principal `main()`
-* Movimentação do histórico para dentro da `main()`
-* Movimentação do loop principal para dentro da `main()`
-* Organização da execução principal do programa
-* Uso de `if __name__ == "__main__":`
-* Preparação da estrutura para futuros testes automatizados
+* Criação da função `main()`
+* Movimentação do histórico para dentro da função principal
+* Movimentação do `while` para dentro da função principal
+* Implementação de `if __name__ == "__main__":`
+* Melhor organização da execução do programa
+* Preparação do código para futuros testes automatizados
 
 ### V2.2
 
 * Criação da função `menu_historico()`
 * Separação do submenu de histórico da função `main()`
-* Organização das opções de visualização e limpeza do histórico
-* Passagem do histórico como parâmetro para o menu
-* Melhoria na organização do fluxo principal
+* Organização das opções do histórico
+* Histórico passado como parâmetro
+* Melhoria no fluxo principal
 
 ### V2.3
 
 * Criação da função `validar_operacao()`
-* Separação da validação das operações matemáticas
-* Validação das opções de `1` a `4`
-* Melhoria na organização da função `main()`
-* Redução da lógica diretamente dentro do fluxo principal
+* Validação das operações matemáticas
+* Validação das opções de 1 a 4
+* Separação da validação da função `main()`
+* Melhoria na organização do código
 
-## 🔮 Futuras atualizações
+### V2.4
 
-* Melhorar a organização do `main.py`
+* Separação da entrada do primeiro e segundo número
+* Criação da função `input_numero1()`
+* Criação da função `input_numero2()`
+* Validação independente dos dois números
+* Melhoria no tratamento de valores inválidos
+* Organização da entrada de dados em funções específicas
+
+## 🔮 Próximas versões
+
+* Melhorar a organização da `main()`
 * Melhorar a apresentação dos resultados
 * Adicionar novas operações matemáticas
 * Permitir cálculos com mais de dois números
 * Melhorar o sistema de histórico
-* Criar testes automatizados
+* Implementar testes automatizados
 * Criar uma interface gráfica
 
 ## ▶️ Como executar
 
-No terminal, execute:
+Certifique-se de ter o Python instalado e execute:
 
 ```bash
 python main.py
@@ -178,4 +185,4 @@ python main.py
 
 **Ronaldo José da Silva Junior**
 
-Projeto desenvolvido para estudos e construção de portfólio em Python.
+Projeto desenvolvido para estudos de Python e construção de portfólio.

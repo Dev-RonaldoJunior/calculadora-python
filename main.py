@@ -64,20 +64,25 @@ def menu_historico(historico):
     else:
         print("\nOpção inválida!")
                     
-#=====        Input dos Numeros        =====
-def input_numero():
+#=====        Input do Número1        =====
+def input_numero1():
     try:
         numero1 = float(input("\nDigite o primeiro número: "))
-        numero2 = float(input("Digite o segundo número: "))
-
-        return numero1, numero2
-
+        return numero1
     except:
-        print("\nValor digitado invalido")
-        print("Digite apenas numeros")
+        print("\nValor digitado invalido!")
+        print("Digite apenas numero.")
+        return None
 
-        return None, None
-
+#=====        Input do Número2        =====
+def input_numero2():
+    try:
+        numero2 = float(input("\nDigite o primeiro número: "))
+        return numero2
+    except:
+        print("\nValor digitado invalido!")
+        print("Digite apenas numero.")
+        return None
 #=====        Calcular        =====
 def realizar_calculo(operacao, numero1, numero2):
 
@@ -124,7 +129,7 @@ def validar_operacao(operacao):
 def main():
     #==============================APRESENTAÇÃO==============================
     print("\n===== CALCULADORA BASICA =====")
-    print("=====        V2.3        =====")
+    print("=====        V2.4        =====")
 
     #==============================LISTA PARA HISTÓRICO DE CALCULOS==============================
     historico = []
@@ -153,10 +158,11 @@ def main():
             continue
 
         #==============================INPUT DOS NÚMEROS==============================
-        numero1, numero2 = input_numero()
+        numero1 = input_numero1()
+        numero2 = input_numero2()
 
         #==============================TRATAMENTO DE ERRO NOS NÚMEROS==============================
-        if numero1 is None:
+        if numero1 is None or numero2 is None:
             continue
 
         #==============================TRATAMENTO DE DIVISÃO POR ZERO==============================
