@@ -172,6 +172,17 @@ Contém as funções responsáveis pelas operações matemáticas:
 * Remoção da necessidade de retornar `None` em caso de erro
 * Melhoria no fluxo de entrada dos números
 
+### V2.6
+
+* Implementada repetição do submenu de histórico utilizando `while`
+* Validação contínua das opções do submenu
+* Utilização de `break` após uma opção válida
+* Opção 1 chama `mostrar_historico()`
+* Opção 2 chama `limpar_historico()`
+* Opções inválidas não encerram mais o submenu
+* Melhorado o fluxo de navegação do menu de histórico
+
+
 
 ## 🔮 Próximas versões
 

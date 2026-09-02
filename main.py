@@ -48,21 +48,20 @@ def menu_historico(historico):
     #==============================SUB MENU==============================
     print("\n1 - Ver histórico")
     print("2 - Limpar Histórico")
-    
-    #==============================INPUT DA OPÇÃO DO HISTÓRICO==============================
-    operacao2 = input("\nOpção: ")
-    
-    #==============================VISUALIZAR HISTÓRICO==============================
-    if operacao2 == "1":
-        mostrar_historico(historico)
-                    
-    #==============================APAGAR HISTÓRICO==============================
-    elif operacao2 == "2":
-        limpar_historico(historico)
-                    
-    #==============================OPÇÃO INVALIDA==============================
-    else:
-        print("\nOpção inválida!")
+
+    while True:
+
+        #==============================INPUT DA OPÇÃO DO HISTÓRICO==============================
+        operacao2 = input("\nOpção: ")
+
+        if operacao2 == "1":
+            mostrar_historico(historico)
+            break
+        elif operacao2 =="2":
+            limpar_historico(historico)
+            break
+        else:
+            print("Opção inválida!")
                     
 #=====        Input do Número1        =====
 def input_numero1():
@@ -131,7 +130,7 @@ def validar_operacao(operacao):
 def main():
     #==============================APRESENTAÇÃO==============================
     print("\n===== CALCULADORA BASICA =====")
-    print("=====        V2.5        =====")
+    print("=====        V2.6        =====")
 
     #==============================LISTA PARA HISTÓRICO DE CALCULOS==============================
     historico = []
