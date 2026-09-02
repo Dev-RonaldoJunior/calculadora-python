@@ -1,35 +1,34 @@
 # 🧮 Calculadora Básica em Python
 
-Projeto desenvolvido em Python com o objetivo de praticar lógica de programação, estruturas de repetição, condicionais, tratamento de erros, listas, funções e modularização.
+Projeto desenvolvido para praticar conceitos de programação em Python, como lógica de programação, estruturas de repetição, condicionais, tratamento de erros, listas, funções e modularização.
 
 ## 📌 Sobre o projeto
 
-Esta é uma calculadora executada pelo terminal, desenvolvida de forma incremental, com novas funcionalidades e melhorias de organização adicionadas a cada versão.
+Uma calculadora executada pelo terminal, desenvolvida de forma incremental, fazendo parte dos meus estudos e portfólio de programação.
 
-O projeto faz parte do meu portfólio de estudos em programação.
+O projeto está sendo desenvolvido por versões, adicionando novas funcionalidades e melhorando a organização do código gradualmente.
 
 ## 🚀 Funcionalidades
 
-* ➕ Soma
-* ➖ Subtração
-* ✖️ Multiplicação
-* ➗ Divisão
-* 🛑 Tratamento de divisão por zero
-* ⚠️ Tratamento de entradas inválidas
-* 📋 Histórico de cálculos
-* 🗑️ Limpeza do histórico
-* ✅ Confirmação antes de apagar o histórico
-* 📦 Operações matemáticas separadas em um módulo
-* 🔧 Funções para organização do código
-* 🔢 Função específica para entrada dos números
-* 🧮 Função específica para realização dos cálculos
-* 🔣 Função específica para identificação do símbolo da operação
+* Soma
+* Subtração
+* Multiplicação
+* Divisão
+* Tratamento de divisão por zero
+* Tratamento de valores inválidos
+* Histórico de cálculos
+* Visualização do histórico
+* Limpeza do histórico
+* Confirmação antes de apagar o histórico
+* Operações matemáticas separadas em um módulo
+* Funções para organização do código
+* Função principal `main()` para controlar a execução da calculadora
+* Organização do fluxo principal do programa
 
 ## 📂 Estrutura do projeto
 
 ```text
 calculadora/
-
 │
 ├── main.py
 ├── calculos.py
@@ -40,20 +39,11 @@ calculadora/
 
 ### `main.py`
 
-Responsável pelo funcionamento principal da calculadora, incluindo:
-
-* Menu de opções
-* Entrada dos dados
-* Histórico
-* Tratamento de erros
-* Controle do programa
-* Funções de organização do código
-* Realização dos cálculos
-* Formatação do histórico
+Responsável pelo fluxo principal da calculadora, menus, entrada de dados, histórico, tratamento de erros e controle da execução do programa.
 
 ### `calculos.py`
 
-Contém as funções responsáveis pelas operações matemáticas:
+Responsável pelas operações matemáticas da calculadora:
 
 * `somar()`
 * `subtrair()`
@@ -70,72 +60,6 @@ Contém as funções responsáveis pelas operações matemáticas:
 
 ## 📋 Versões
 
-### V2.0
-
-* Criação da função `input_numero()` para entrada dos números
-* Criação da função `realizar_calculo()` para centralizar a realização dos cálculos
-* Criação da função `simbolo_operacao()` para identificar o símbolo da operação
-* Organização das responsabilidades em funções
-* Validação da opção escolhida antes da entrada dos números
-* Tratamento de divisão por zero
-* Manutenção do histórico de cálculos
-* Melhoria na organização do `main.py`
-* Renomeação de `imput_numero()` para `input_numero()`
-
-### V1.9
-
-* Criação da função `imput_numero()`
-* Separação da entrada dos números em uma função
-* Retorno dos números através da função
-* Tratamento de entradas inválidas
-
-### V1.8
-
-* Criação da função `mostrar_historico()`
-* Criação da função `limpar_historico()`
-* Organização das funções relacionadas ao histórico
-* Passagem do histórico como parâmetro para as funções
-
-### V1.7
-
-* Criação da função `mostrar_menu()`
-* Separação do menu principal em uma função
-* Organização inicial do código em funções
-
-### V1.6
-
-* Operações matemáticas separadas no arquivo `calculos.py`
-* Criação de funções para soma, subtração, multiplicação e divisão
-* Utilização de `import` para acessar o módulo de cálculos
-* Organização do código em arquivos separados
-* Manutenção do histórico de cálculos
-* Tratamento de divisão por zero
-* Tratamento de entradas inválidas
-
-### V1.5
-
-* Confirmação antes de limpar o histórico
-* Opções para confirmar ou cancelar a exclusão
-
-### V1.4
-
-* Opção para limpar o histórico
-* Submenu de histórico
-
-### V1.3
-
-* Visualização do histórico
-* Mensagem quando não existem cálculos registrados
-
-### V1.2
-
-* Criação do histórico de cálculos
-
-### V1.1
-
-* Tratamento de entradas inválidas
-* Tratamento de divisão por zero
-
 ### V1.0
 
 * Soma
@@ -145,22 +69,89 @@ Contém as funções responsáveis pelas operações matemáticas:
 * Menu de operações
 * Encerramento da calculadora
 
+### V1.1
+
+* Tratamento de entradas inválidas
+* Tratamento de divisão por zero
+
+### V1.2
+
+* Criação do histórico de cálculos
+
+### V1.3
+
+* Visualização do histórico
+* Mensagem quando o histórico está vazio
+
+### V1.4
+
+* Limpeza do histórico
+* Criação de submenu para o histórico
+
+### V1.5
+
+* Confirmação antes de limpar o histórico
+* Opções de confirmação ou cancelamento
+
+### V1.6
+
+* Separação das operações matemáticas em `calculos.py`
+* Criação das funções matemáticas
+* Importação do módulo `calculos`
+* Separação da lógica em arquivos diferentes
+
+### V1.7
+
+* Criação da função `mostrar_menu()`
+* Organização do menu em uma função
+* Melhoria na organização do código
+
+### V1.8
+
+* Criação da função `mostrar_historico()`
+* Criação da função `limpar_historico()`
+* Organização das funções relacionadas ao histórico
+* Passagem do histórico como parâmetro
+
+### V1.9
+
+* Criação da função `input_numero()`
+* Separação da entrada dos números em uma função
+* Retorno dos números para o fluxo principal
+* Tratamento de entradas inválidas
+
+### V2.0
+
+* Criação da função `realizar_calculo()`
+* Criação da função `simbolo_operacao()`
+* Validação da operação antes da entrada dos números
+* Tratamento de divisão por zero
+* Organização do fluxo principal
+* Melhoria na formatação do histórico
+* Correção do nome da função `input_numero()`
+
+### V2.1
+
+* Criação da função principal `main()`
+* Movimentação do histórico para dentro da `main()`
+* Movimentação do loop principal para dentro da `main()`
+* Organização da execução principal do programa
+* Uso de `if __name__ == "__main__":`
+* Preparação da estrutura para futuros testes automatizados
+
 ## 🔮 Futuras atualizações
 
-* [ ] Melhorar a organização do `main.py`
-* [ ] Criar uma função principal `main()`
-* [ ] Melhorar a formatação dos resultados
-* [ ] Adicionar novas operações matemáticas
-* [ ] Permitir operações com mais de dois números
-* [ ] Melhorar o sistema de histórico
-* [ ] Criar uma interface gráfica
-* [ ] Adicionar testes automatizados
+* Melhorar a organização do `main.py`
+* Melhorar a apresentação dos resultados
+* Adicionar novas operações matemáticas
+* Permitir cálculos com mais de dois números
+* Melhorar o sistema de histórico
+* Criar testes automatizados
+* Criar uma interface gráfica
 
 ## ▶️ Como executar
 
-É necessário ter o Python instalado.
-
-Clone o repositório, abra a pasta no VS Code e execute:
+No terminal, execute:
 
 ```bash
 python main.py
@@ -170,4 +161,4 @@ python main.py
 
 **Ronaldo José da Silva Junior**
 
-Projeto desenvolvido para estudos e construção de portfólio.
+Projeto desenvolvido para estudos e construção de portfólio em Python.

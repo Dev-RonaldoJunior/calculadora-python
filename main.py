@@ -76,7 +76,6 @@ def realizar_calculo(operacao, numero1, numero2):
     elif operacao == "4":
         return calculos.dividir(numero1, numero2)
 
-
 #=====        Símbolo da Operação        =====
 def simbolo_operacao(operacao):
 
@@ -92,75 +91,79 @@ def simbolo_operacao(operacao):
     elif operacao == "4":
         return "÷"
 
+#=====        FUNÇÃO PRINCIPAL        =====
+def main():
+    #==============================APRESENTAÇÃO==============================
+    print("\n===== CALCULADORA BASICA =====")
+    print("=====        V2.1        =====")
 
-#==============================APRESENTAÇÃO==============================
-print("\n===== CALCULADORA BASICA =====")
-print("=====        V2.0        =====")
+    #==============================LISTA PARA HISTÓRICO DE CALCULOS==============================
+    historico = []
 
-#==============================LISTA COM HISTÓRICO DE CALCULOS==============================
-historico = []
+    #==============================LOOP==============================
+    while True:
 
-#==============================LOOP==============================
-while True:
+        mostrar_menu()
 
-    mostrar_menu()
+        #==============================INPUT DA OPÇÃO DE FUNÇÃO==============================
+        operacao = input("\nOpção: ")
 
-    #==============================INPUT DA OPÇÃO DE FUNÇÃO==============================
-    operacao = input("\nOpção: ")
+        #==============================FECHAR A CALCULADORA==============================
+        if operacao == "0":
+            print("\nCalculadora encerrada")
+            break
 
-    #==============================FECHAR A CALCULADORA==============================
-    if operacao == "0":
-        print("\nCalculadora encerrada")
-        break
+        #==============================FUNÇÃO DO HISTÓRICO==============================
+        elif operacao == "5":
 
-    #==============================FUNÇÃO DO HISTÓRICO==============================
-    elif operacao == "5":
+            #==============================SUB MENU==============================
+            print("\n1 - Ver histórico")
+            print("2 - Limpar Histórico")
 
-        #==============================SUB MENU==============================
-        print("\n1 - Ver histórico")
-        print("2 - Limpar Histórico")
+            #==============================INPUT DA OPÇÃO DO HISTÓRICO==============================
+            operacao2 = input("\nOpção: ")
 
-        #==============================INPUT DA OPÇÃO DO HISTÓRICO==============================
-        operacao2 = input("\nOpção: ")
+            #==============================VISUALIZAR HISTÓRICO==============================
+            if operacao2 == "1":
+                mostrar_historico(historico)
+                continue
 
-        #==============================VISUALIZAR HISTÓRICO==============================
-        if operacao2 == "1":
-            mostrar_historico(historico)
-            continue
+            #==============================APAGAR HISTÓRICO==============================
+            elif operacao2 == "2":
+                limpar_historico(historico)
+                continue
 
-        #==============================APAGAR HISTÓRICO==============================
-        elif operacao2 == "2":
-            limpar_historico(historico)
-            continue
+            #==============================OPÇÃO INVALIDA==============================
+            else:
+                print("\nOpção inválida!")
+                continue
 
-        #==============================OPÇÃO INVALIDA==============================
-        else:
+        #==============================VERIFICAÇÃO DA OPERAÇÃO==============================
+        if operacao not in ["1", "2", "3", "4"]:
             print("\nOpção inválida!")
             continue
 
-    #==============================VERIFICAÇÃO DA OPERAÇÃO==============================
-    if operacao not in ["1", "2", "3", "4"]:
-        print("\nOpção inválida!")
-        continue
+        #==============================INPUT DOS NÚMEROS==============================
+        numero1, numero2 = input_numero()
 
-    #==============================INPUT DOS NÚMEROS==============================
-    numero1, numero2 = input_numero()
+        #==============================TRATAMENTO DE ERRO NOS NÚMEROS==============================
+        if numero1 is None:
+            continue
 
-    #==============================TRATAMENTO DE ERRO NOS NÚMEROS==============================
-    if numero1 is None:
-        continue
+        #==============================TRATAMENTO DE DIVISÃO POR ZERO==============================
+        if operacao == "4" and numero2 == 0:
+            print("\nNão é possível dividir por zero")
+            continue
 
-    #==============================TRATAMENTO DE DIVISÃO POR ZERO==============================
-    if operacao == "4" and numero2 == 0:
-        print("\nNão é possível dividir por zero")
-        continue
+        #==============================REALIZAR CÁLCULO==============================
+        resultado = realizar_calculo(operacao, numero1, numero2)
 
-    #==============================REALIZAR CÁLCULO==============================
-    resultado = realizar_calculo(operacao, numero1, numero2)
+        #==============================EXIBIR RESULTADO==============================
+        print("Resultado:", resultado)
 
-    #==============================EXIBIR RESULTADO==============================
-    print("Resultado:", resultado)
+        #==============================ADICIONAR AO HISTÓRICO==============================
+        simbolo = simbolo_operacao(operacao)
+        historico.append(f"{numero1} {simbolo} {numero2} = {resultado}")
 
-    #==============================ADICIONAR AO HISTÓRICO==============================
-    simbolo = simbolo_operacao(operacao)
-    historico.append(f"{numero1} {simbolo} {numero2} = {resultado}")
+if __name__ == "__main__":
+    main()
