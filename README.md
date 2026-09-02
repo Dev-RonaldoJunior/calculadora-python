@@ -24,6 +24,7 @@ O projeto está sendo desenvolvido por versões, adicionando novas funcionalidad
 * Funções para organização do código
 * Função principal `main()` para controlar a execução da calculadora
 * Menu de histórico separado em uma função própria
+* Validação das operações matemáticas
 
 ## 📂 Estrutura do projeto
 
@@ -146,6 +147,14 @@ Responsável pelas operações matemáticas da calculadora:
 * Organização das opções de visualização e limpeza do histórico
 * Passagem do histórico como parâmetro para o menu
 * Melhoria na organização do fluxo principal
+
+### V2.3
+
+* Criação da função `validar_operacao()`
+* Separação da validação das operações matemáticas
+* Validação das opções de `1` a `4`
+* Melhoria na organização da função `main()`
+* Redução da lógica diretamente dentro do fluxo principal
 
 ## 🔮 Futuras atualizações
 
