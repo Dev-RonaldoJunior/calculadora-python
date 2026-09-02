@@ -23,7 +23,7 @@ O projeto está sendo desenvolvido por versões, adicionando novas funcionalidad
 * Operações matemáticas separadas em um módulo
 * Funções para organização do código
 * Função principal `main()` para controlar a execução da calculadora
-* Organização do fluxo principal do programa
+* Menu de histórico separado em uma função própria
 
 ## 📂 Estrutura do projeto
 
@@ -138,6 +138,14 @@ Responsável pelas operações matemáticas da calculadora:
 * Organização da execução principal do programa
 * Uso de `if __name__ == "__main__":`
 * Preparação da estrutura para futuros testes automatizados
+
+### V2.2
+
+* Criação da função `menu_historico()`
+* Separação do submenu de histórico da função `main()`
+* Organização das opções de visualização e limpeza do histórico
+* Passagem do histórico como parâmetro para o menu
+* Melhoria na organização do fluxo principal
 
 ## 🔮 Futuras atualizações
 

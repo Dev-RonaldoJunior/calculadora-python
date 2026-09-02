@@ -21,6 +21,26 @@ def mostrar_historico(historico):
         for item in historico:
             print(item)
 
+def menu_historico(historico):
+    #==============================SUB MENU==============================
+    print("\n1 - Ver histórico")
+    print("2 - Limpar Histórico")
+    
+    #==============================INPUT DA OPÇÃO DO HISTÓRICO==============================
+    operacao2 = input("\nOpção: ")
+    
+    #==============================VISUALIZAR HISTÓRICO==============================
+    if operacao2 == "1":
+        mostrar_historico(historico)
+                    
+    #==============================APAGAR HISTÓRICO==============================
+    elif operacao2 == "2":
+        limpar_historico(historico)
+                    
+    #==============================OPÇÃO INVALIDA==============================
+    else:
+        print("\nOpção inválida!")
+                    
 #=====        Limpar Histórico        =====
 def limpar_historico(historico):
     print("\nTem certeza que deseja apagar o histórico da calculadora?")
@@ -95,7 +115,7 @@ def simbolo_operacao(operacao):
 def main():
     #==============================APRESENTAÇÃO==============================
     print("\n===== CALCULADORA BASICA =====")
-    print("=====        V2.1        =====")
+    print("=====        V2.2        =====")
 
     #==============================LISTA PARA HISTÓRICO DE CALCULOS==============================
     historico = []
@@ -113,30 +133,10 @@ def main():
             print("\nCalculadora encerrada")
             break
 
-        #==============================FUNÇÃO DO HISTÓRICO==============================
+        #==============================HISTÓRICO==============================
         elif operacao == "5":
-
-            #==============================SUB MENU==============================
-            print("\n1 - Ver histórico")
-            print("2 - Limpar Histórico")
-
-            #==============================INPUT DA OPÇÃO DO HISTÓRICO==============================
-            operacao2 = input("\nOpção: ")
-
-            #==============================VISUALIZAR HISTÓRICO==============================
-            if operacao2 == "1":
-                mostrar_historico(historico)
-                continue
-
-            #==============================APAGAR HISTÓRICO==============================
-            elif operacao2 == "2":
-                limpar_historico(historico)
-                continue
-
-            #==============================OPÇÃO INVALIDA==============================
-            else:
-                print("\nOpção inválida!")
-                continue
+            menu_historico(historico)
+            continue
 
         #==============================VERIFICAÇÃO DA OPERAÇÃO==============================
         if operacao not in ["1", "2", "3", "4"]:
