@@ -1,5 +1,5 @@
 #==============================IMPORT==============================
-import calculos
+import calculos, historico
 
 #==============================CONSTANTE==============================
 OPERACOES_VALIDAS = ["1", "2", "3", "4"]
@@ -28,60 +28,6 @@ def mostrar_menu():
     print("3 - Multiplicação")
     print("4 - Divisão")
     print("5 - Histórico")
-
-#=====        Mostrar Histórico       =====
-def mostrar_historico(historico):
-    if not historico:
-        print("\nNenhum cálculo realizado.")
-    
-    else:
-        for item in historico:
-            print(item)
-
-#=====        Limpar Histórico        =====
-def limpar_historico(historico):
-    print("\nTem certeza que deseja apagar o histórico da calculadora?")
-    print("S para sim e N para Não")
-    
-
-    while True:
-        operacao = input("Opção: ")
-        
-        operacao = operacao.upper()
-        #Positivo
-        if operacao == "S":
-            historico.clear()
-            print("Histórico Limpo.")
-            break
-
-        #Negativo
-        elif operacao == "N":
-            print("\nHistórico não apagado")
-            break
-
-        #Invalido
-        else:
-            print("\nOpção inválida!")
-
-#=====        Sub Menu do Histórico        =====
-def menu_historico(historico):
-    #==============================SUB MENU==============================
-    print("\n1 - Ver histórico")
-    print("2 - Limpar Histórico")
-
-    while True:
-
-        #==============================INPUT DA OPÇÃO DO HISTÓRICO==============================
-        operacao2 = input("\nOpção: ")
-
-        if operacao2 == "1":
-            mostrar_historico(historico)
-            break
-        elif operacao2 =="2":
-            limpar_historico(historico)
-            break
-        else:
-            print("Opção inválida!")
                     
 #=====        Input do Número1        =====
 def input_numero1():
@@ -131,7 +77,7 @@ def main():
     print("=====        V3.1        =====")
 
     #==============================LISTA PARA HISTÓRICO DE CALCULOS==============================
-    historico = []
+    lista_historico = []
 
     #==============================LOOP==============================
     while True:
@@ -148,7 +94,7 @@ def main():
 
         #==============================HISTÓRICO==============================
         elif operacao == "5":
-            menu_historico(historico)
+            historico.menu_historico(lista_historico)
             continue
 
         #==============================VERIFICAÇÃO DA OPERAÇÃO==============================
@@ -173,7 +119,7 @@ def main():
 
         #==============================ADICIONAR AO HISTÓRICO==============================
         simbolo = simbolo_operacao(operacao)
-        historico.append(f"{numero1} {simbolo} {numero2} = {resultado}")
+        lista_historico.append(f"{numero1} {simbolo} {numero2} = {resultado}")
 
 #=======================================================================================================================================================#
 #=================================================================CALCULADORA FUNCIONANDO===============================================================#

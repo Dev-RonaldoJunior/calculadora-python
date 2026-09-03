@@ -224,6 +224,17 @@ Contém as funções responsáveis pelas operações matemáticas:
 * Melhorada a organização e manutenção das operações matemáticas
 * Mantida a integração com o módulo `calculos.py`
 
+### V3.2
+
+* Criado o módulo `historico.py`
+* Movidas as funções de histórico para um módulo separado
+* Criada a função `mostrar_historico()` no módulo de histórico
+* Criada a função `limpar_historico()` no módulo de histórico
+* Criada a função `menu_historico()` no módulo de histórico
+* Atualizado o `main.py` para importar e utilizar o módulo `historico`
+* Melhorada a organização e separação de responsabilidades do projeto
+* Mantido o histórico de cálculos funcionando por meio de uma lista compartilhada entre as funções
+
 
 ## 🔮 Próximas versões
 
