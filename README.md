@@ -6,6 +6,8 @@ Projeto desenvolvido para praticar conceitos de programação em Python, como l�
 
 Uma calculadora executada pelo terminal, desenvolvida de forma incremental durante meus estudos de Python e utilizada como parte do meu portfólio.
 
+O projeto evolui por meio de versões, permitindo acompanhar a implementação de novas funcionalidades, refatorações e melhorias na organização do código.
+
 ## 🚀 Funcionalidades
 
 * Soma
@@ -24,6 +26,7 @@ Uma calculadora executada pelo terminal, desenvolvida de forma incremental duran
 * Menu de histórico separado em função própria
 * Validação das operações matemáticas
 * Entrada dos números separada em funções próprias
+* Apresentação dos resultados organizada em módulo próprio
 
 ## 📂 Estrutura do projeto
 
@@ -32,6 +35,10 @@ calculadora/
 │
 ├── main.py
 ├── calculos.py
+├── historico.py
+├── entradas.py
+├── validacoes.py
+├── apresentacao.py
 ├── README.md
 ├── .gitignore
 └── LICENSE
@@ -39,7 +46,7 @@ calculadora/
 
 ### `main.py`
 
-Responsável pelo fluxo principal da calculadora, menus, entrada de dados, histórico, tratamento de erros e execução do programa.
+Responsável pelo fluxo principal da calculadora, execução do programa, controle do menu, processamento das operações e integração entre os demais módulos.
 
 ### `calculos.py`
 
@@ -49,6 +56,35 @@ Contém as funções responsáveis pelas operações matemáticas:
 * `subtrair()`
 * `multiplicar()`
 * `dividir()`
+
+### `historico.py`
+
+Responsável pelas funcionalidades relacionadas ao histórico de cálculos:
+
+* `mostrar_historico()`
+* `limpar_historico()`
+* `menu_historico()`
+
+### `entradas.py`
+
+Responsável pela entrada e validação dos números informados pelo usuário:
+
+* `input_numero1()`
+* `input_numero2()`
+
+### `validacoes.py`
+
+Responsável pelas validações das operações matemáticas:
+
+* `validar_operacao()`
+
+### `apresentacao.py`
+
+Responsável pela apresentação dos resultados e pelos símbolos das operações:
+
+* `simbolo_operacao()`
+* `mostrar_resultado()`
+* `SIMBOLOS_OPERACOES`
 
 ## 🛠️ Tecnologias utilizadas
 
@@ -259,8 +295,6 @@ Contém as funções responsáveis pelas operações matemáticas:
 * Movida a função `mostrar_menu()` para um módulo separado
 * Atualizado o `main.py` para importar e utilizar o módulo `menu`
 * Melhorada a organização e separação de responsabilidades do projeto
-* O `menu.py` passou a ser responsável pela exibição do menu principal
-* Mantido o funcionamento do fluxo principal da calculadora
 
 ### V3.6
 
@@ -270,18 +304,34 @@ Contém as funções responsáveis pelas operações matemáticas:
 * Atualizado o `main.py` para importar e utilizar o módulo `apresentacao`
 * Melhorada a organização e separação de responsabilidades do projeto
 * Centralizada a apresentação dos resultados e símbolos das operações
-* Mantido o funcionamento do cálculo, exibição dos resultados e histórico
 
+### Correção pós-V3.6
+
+* Removido o módulo `menu.py`
+* Restaurada a função `mostrar_menu()` no `main.py`
+* Removida a importação do módulo `menu`
+* Ajustado o fluxo de exibição do menu principal
+* Revisada a arquitetura do projeto para evitar modularização excessiva
+* Mantidos os demais módulos da aplicação
+* Mantida a funcionalidade do menu principal
+* Reavaliada a organização dos módulos considerando a responsabilidade e o tamanho atual do projeto
 
 ## 🔮 Próximas versões
 
-* Melhorar a organização da `main()`
-* Melhorar a apresentação dos resultados
+As próximas versões serão definidas considerando a evolução técnica do projeto e evitando alterações estruturais que adicionem complexidade sem benefícios claros.
+
+Possíveis melhorias:
+
+* Revisar e melhorar a organização da função `main()`
 * Adicionar novas operações matemáticas
 * Permitir cálculos com mais de dois números
 * Melhorar o sistema de histórico
+* Implementar persistência do histórico
+* Permitir exportação do histórico
 * Implementar testes automatizados
+* Melhorar o tratamento de exceções
 * Criar uma interface gráfica
+* Realizar uma refatoração geral conforme a complexidade do projeto aumentar
 
 ## ▶️ Como executar
 
