@@ -1,5 +1,5 @@
 #==============================IMPORT==============================
-import calculos, historico
+import calculos, historico, entradas
 
 #==============================CONSTANTE==============================
 OPERACOES_VALIDAS = ["1", "2", "3", "4"]
@@ -29,27 +29,6 @@ def mostrar_menu():
     print("4 - Divisão")
     print("5 - Histórico")
                     
-#=====        Input do Número1        =====
-def input_numero1():
-    while True:
-        try:
-            numero1 = float(input("\nDigite o primeiro número: "))
-            return numero1
-
-        except:
-            print("\nValor digitado invalido!")
-            print("Digite apenas numero.")
-        
-#=====        Input do Número2        =====
-def input_numero2():
-    while True:
-        try:
-            numero2 = float(input("\nDigite o segundo número: "))
-            return numero2
-        except:
-            print("\nValor digitado invalido!")
-            print("Digite apenas numero.")
-
 #=====        Calcular        =====
 def realizar_calculo(operacao, numero1, numero2):
     return OPERACOES_CALCULO[operacao](numero1, numero2)
@@ -74,7 +53,7 @@ def mostrar_resultado(numero1, numero2, operacao, resultado):
 def main():
     #==============================APRESENTAÇÃO==============================
     print("\n===== CALCULADORA BASICA =====")
-    print("=====        V3.1        =====")
+    print("=====        V3.3        =====")
 
     #==============================LISTA PARA HISTÓRICO DE CALCULOS==============================
     lista_historico = []
@@ -103,8 +82,8 @@ def main():
             continue
 
         #==============================INPUT DOS NÚMEROS==============================
-        numero1 = input_numero1()
-        numero2 = input_numero2()
+        numero1 = entradas.input_numero1()
+        numero2 = entradas.input_numero2()
 
         #==============================TRATAMENTO DE DIVISÃO POR ZERO==============================
         if operacao == "4" and numero2 == 0:

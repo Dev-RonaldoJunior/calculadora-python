@@ -235,6 +235,15 @@ Contém as funções responsáveis pelas operações matemáticas:
 * Melhorada a organização e separação de responsabilidades do projeto
 * Mantido o histórico de cálculos funcionando por meio de uma lista compartilhada entre as funções
 
+### V3.3
+
+* Criado o módulo `entradas.py`
+* Movidas as funções `input_numero1()` e `input_numero2()` para um módulo separado
+* Atualizado o `main.py` para importar e utilizar o módulo `entradas`
+* Melhorada a organização e separação de responsabilidades do projeto
+* Mantido o tratamento de valores inválidos nas funções de entrada
+* Mantido o fluxo principal da calculadora funcionando normalmente
+
 
 ## 🔮 Próximas versões
 
