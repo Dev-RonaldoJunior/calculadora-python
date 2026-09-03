@@ -6,7 +6,17 @@ Projeto desenvolvido para praticar conceitos de programação em Python, como l�
 
 Uma calculadora executada pelo terminal, desenvolvida de forma incremental durante meus estudos de Python e utilizada como parte do meu portfólio.
 
-O projeto evolui por meio de versões, permitindo acompanhar a implementação de novas funcionalidades, refatorações e melhorias na organização do código.
+O projeto evolui por meio de versões, permitindo acompanhar a implementação de novas funcionalidades, refatorações, correções e melhorias na organização do código.
+
+Atualmente, o projeto utiliza o padrão **Semantic Versioning (SemVer)** para identificar suas versões:
+
+```text
+MAJOR.MINOR.PATCH
+│     │     │
+│     │     └── Correções pequenas e bugs
+│     └──────── Novas funcionalidades compatíveis
+└────────────── Mudanças grandes ou incompatíveis
+```
 
 ## 🚀 Funcionalidades
 
@@ -94,9 +104,9 @@ Responsável pela apresentação dos resultados e pelos símbolos das operaçõe
 * GitHub
 * GitHub Desktop
 
-## 📋 Versões
+## 📋 Histórico de versões
 
-### V1.0
+### 1.0.0 — Versão inicial
 
 * Soma
 * Subtração
@@ -105,57 +115,57 @@ Responsável pela apresentação dos resultados e pelos símbolos das operaçõe
 * Menu de operações
 * Encerramento da calculadora
 
-### V1.1
+### 1.1.0 — Validação inicial
 
 * Tratamento de valores inválidos
 * Tratamento de divisão por zero
 
-### V1.2
+### 1.2.0 — Histórico de cálculos
 
 * Criação do histórico de cálculos
 
-### V1.3
+### 1.3.0 — Visualização do histórico
 
 * Visualização do histórico
 * Mensagem para histórico vazio
 
-### V1.4
+### 1.4.0 — Limpeza do histórico
 
 * Limpeza do histórico
 * Criação do submenu de histórico
 
-### V1.5
+### 1.5.0 — Confirmação de limpeza
 
 * Confirmação antes de limpar o histórico
 * Opções de confirmação ou cancelamento
 
-### V1.6
+### 1.6.0 — Módulo de cálculos
 
 * Operações matemáticas separadas no arquivo `calculos.py`
 * Criação das funções de soma, subtração, multiplicação e divisão
 * Importação do módulo `calculos`
 * Separação do projeto em arquivos
 
-### V1.7
+### 1.7.0 — Organização do menu
 
 * Criação da função `mostrar_menu()`
 * Organização do menu em uma função própria
 * Melhoria na organização do código
 
-### V1.8
+### 1.8.0 — Organização do histórico
 
 * Criação das funções `mostrar_historico()` e `limpar_historico()`
 * Organização das funções relacionadas ao histórico
 * Histórico passado como parâmetro
 
-### V1.9
+### 1.9.0 — Organização das entradas
 
 * Criação da função `input_numero()`
 * Separação da entrada dos números
 * Retorno dos números através da função
 * Tratamento de valores inválidos
 
-### V2.0
+### 1.10.0 — Organização do cálculo
 
 * Criação da função `realizar_calculo()`
 * Criação da função `simbolo_operacao()`
@@ -165,7 +175,7 @@ Responsável pela apresentação dos resultados e pelos símbolos das operaçõe
 * Formatação do histórico de cálculos
 * Correção do nome `imput_numero()` para `input_numero()`
 
-### V2.1
+### 1.11.0 — Função principal
 
 * Criação da função `main()`
 * Movimentação do histórico para dentro da função principal
@@ -174,7 +184,7 @@ Responsável pela apresentação dos resultados e pelos símbolos das operaçõe
 * Melhor organização da execução do programa
 * Preparação do código para futuros testes automatizados
 
-### V2.2
+### 1.12.0 — Submenu de histórico
 
 * Criação da função `menu_historico()`
 * Separação do submenu de histórico da função `main()`
@@ -182,7 +192,7 @@ Responsável pela apresentação dos resultados e pelos símbolos das operaçõe
 * Histórico passado como parâmetro
 * Melhoria no fluxo principal
 
-### V2.3
+### 1.13.0 — Validação das operações
 
 * Criação da função `validar_operacao()`
 * Validação das operações matemáticas
@@ -190,7 +200,7 @@ Responsável pela apresentação dos resultados e pelos símbolos das operaçõe
 * Separação da validação da função `main()`
 * Melhoria na organização do código
 
-### V2.4
+### 1.14.0 — Separação das entradas
 
 * Separação da entrada do primeiro e segundo número
 * Criação da função `input_numero1()`
@@ -199,7 +209,7 @@ Responsável pela apresentação dos resultados e pelos símbolos das operaçõe
 * Melhoria no tratamento de valores inválidos
 * Organização da entrada de dados em funções específicas
 
-### V2.5
+### 1.15.0 — Repetição das entradas inválidas
 
 * Implementação de repetição da entrada de números inválidos
 * Utilização de `while` nas funções `input_numero1()` e `input_numero2()`
@@ -208,7 +218,7 @@ Responsável pela apresentação dos resultados e pelos símbolos das operaçõe
 * Remoção da necessidade de retornar `None` em caso de erro
 * Melhoria no fluxo de entrada dos números
 
-### V2.6
+### 1.16.0 — Repetição do submenu
 
 * Implementada repetição do submenu de histórico utilizando `while`
 * Validação contínua das opções do submenu
@@ -218,7 +228,7 @@ Responsável pela apresentação dos resultados e pelos símbolos das operaçõe
 * Opções inválidas não encerram mais o submenu
 * Melhorado o fluxo de navegação do menu de histórico
 
-### V2.7
+### 1.17.0 — Repetição da confirmação
 
 * Implementada repetição da confirmação para limpar o histórico
 * Adicionado `while True` na função `limpar_historico()`
@@ -226,7 +236,7 @@ Responsável pela apresentação dos resultados e pelos símbolos das operaçõe
 * Respostas inválidas continuam solicitando uma nova opção
 * Melhorado o fluxo de limpeza do histórico
 
-### V2.8
+### 1.18.0 — Apresentação dos resultados
 
 * Criada a função `mostrar_resultado()`
 * Melhorada a apresentação dos resultados
@@ -234,7 +244,7 @@ Responsável pela apresentação dos resultados e pelos símbolos das operaçõe
 * Reutilização da função `simbolo_operacao()`
 * Organização da exibição do resultado dentro de uma função própria
 
-### V2.9
+### 1.19.0 — Centralização das operações válidas
 
 * Criada a constante `OPERACOES_VALIDAS`
 * Centralizada a definição das operações matemáticas disponíveis
@@ -242,7 +252,7 @@ Responsável pela apresentação dos resultados e pelos símbolos das operaçõe
 * Melhorada a organização e manutenção do código
 * Reduzida a repetição das opções válidas no processo de validação
 
-### V3.0
+### 1.20.0 — Centralização dos símbolos
 
 * Criada a constante `SIMBOLOS_OPERACOES`
 * Centralizados os símbolos das operações em um dicionário
@@ -251,7 +261,7 @@ Responsável pela apresentação dos resultados e pelos símbolos das operaçõe
 * Melhorada a organização e manutenção dos símbolos das operações
 * Mantido o uso dos símbolos no resultado e no histórico
 
-### V3.1
+### 1.21.0 — Centralização das funções de cálculo
 
 * Criada a constante `OPERACOES_CALCULO`
 * Centralizadas as funções de cálculo em um dicionário
@@ -260,7 +270,7 @@ Responsável pela apresentação dos resultados e pelos símbolos das operaçõe
 * Melhorada a organização e manutenção das operações matemáticas
 * Mantida a integração com o módulo `calculos.py`
 
-### V3.2
+### 1.22.0 — Módulo de histórico
 
 * Criado o módulo `historico.py`
 * Movidas as funções de histórico para um módulo separado
@@ -271,7 +281,7 @@ Responsável pela apresentação dos resultados e pelos símbolos das operaçõe
 * Melhorada a organização e separação de responsabilidades do projeto
 * Mantido o histórico de cálculos funcionando por meio de uma lista compartilhada entre as funções
 
-### V3.3
+### 1.23.0 — Módulo de entradas
 
 * Criado o módulo `entradas.py`
 * Movidas as funções `input_numero1()` e `input_numero2()` para um módulo separado
@@ -280,7 +290,7 @@ Responsável pela apresentação dos resultados e pelos símbolos das operaçõe
 * Mantido o tratamento de valores inválidos nas funções de entrada
 * Mantido o fluxo principal da calculadora funcionando normalmente
 
-### V3.4
+### 1.24.0 — Módulo de validações
 
 * Criado o módulo `validacoes.py`
 * Movida a função `validar_operacao()` para um módulo separado
@@ -289,23 +299,23 @@ Responsável pela apresentação dos resultados e pelos símbolos das operaçõe
 * Melhorada a organização e separação de responsabilidades do projeto
 * Mantida a validação das operações matemáticas disponíveis
 
-### V3.5
+### 1.25.0 — Modularização do menu
 
 * Criado o módulo `menu.py`
 * Movida a função `mostrar_menu()` para um módulo separado
 * Atualizado o `main.py` para importar e utilizar o módulo `menu`
-* Melhorada a organização e separação de responsabilidades do projeto
 
-### V3.6
+> Esta alteração foi posteriormente revertida após uma revisão arquitetural, pois a criação de um módulo exclusivo para uma única função não trouxe benefícios suficientes para o tamanho atual do projeto.
+
+### 1.26.0 — Módulo de apresentação
 
 * Criado o módulo `apresentacao.py`
 * Movidas as funções `simbolo_operacao()` e `mostrar_resultado()` para um módulo separado
 * Movida a constante `SIMBOLOS_OPERACOES` para o módulo `apresentacao`
 * Atualizado o `main.py` para importar e utilizar o módulo `apresentacao`
-* Melhorada a organização e separação de responsabilidades do projeto
 * Centralizada a apresentação dos resultados e símbolos das operações
 
-### Correção pós-V3.6
+### 1.26.1 — Correção arquitetural
 
 * Removido o módulo `menu.py`
 * Restaurada a função `mostrar_menu()` no `main.py`
@@ -332,6 +342,12 @@ Possíveis melhorias:
 * Melhorar o tratamento de exceções
 * Criar uma interface gráfica
 * Realizar uma refatoração geral conforme a complexidade do projeto aumentar
+
+As versões futuras seguirão o padrão **Semantic Versioning (SemVer)**:
+
+* **PATCH (`1.26.2`)** — correções pequenas e ajustes
+* **MINOR (`1.27.0`)** — novas funcionalidades compatíveis
+* **MAJOR (`2.0.0`)** — mudanças grandes ou incompatíveis
 
 ## ▶️ Como executar
 
