@@ -1,15 +1,8 @@
 #==============================IMPORT==============================
-import calculos, historico, entradas, validacoes, menu
+import calculos, historico, entradas, validacoes, menu, apresentacao
 
 #==============================CONSTANTE==============================
 OPERACOES_VALIDAS = ["1", "2", "3", "4"]
-
-SIMBOLOS_OPERACOES = {
-    "1": "+",
-    "2": "-",
-    "3": "x",
-    "4": "÷"
-}
 
 OPERACOES_CALCULO = {
     "1": calculos.somar,
@@ -23,19 +16,11 @@ OPERACOES_CALCULO = {
 def realizar_calculo(operacao, numero1, numero2):
     return OPERACOES_CALCULO[operacao](numero1, numero2)
 
-#=====        Símbolo da Operação        =====
-def simbolo_operacao(operacao):
-    return SIMBOLOS_OPERACOES[operacao]
-
-#=====        Exibir Resultado        =====
-def mostrar_resultado(numero1, numero2, operacao, resultado):
-    print(f"{numero1} {simbolo_operacao(operacao)} {numero2} = {resultado}")
-
 #=====        Função Principal       =====
 def main():
     #==============================APRESENTAÇÃO==============================
     print("\n===== CALCULADORA BASICA =====")
-    print("=====        V3.5        =====")
+    print("=====        V3.6        =====")
 
     #==============================LISTA PARA HISTÓRICO DE CALCULOS==============================
     lista_historico = []
@@ -76,10 +61,10 @@ def main():
         resultado = realizar_calculo(operacao, numero1, numero2)
 
         #==============================EXIBIR RESULTADO==============================
-        mostrar_resultado(numero1, numero2, operacao, resultado)
+        apresentacao.mostrar_resultado(numero1, numero2, operacao, resultado)
 
         #==============================ADICIONAR AO HISTÓRICO==============================
-        simbolo = simbolo_operacao(operacao)
+        simbolo = apresentacao.simbolo_operacao(operacao)
         lista_historico.append(f"{numero1} {simbolo} {numero2} = {resultado}")
 
 #=======================================================================================================================================================#

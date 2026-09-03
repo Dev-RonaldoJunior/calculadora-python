@@ -262,6 +262,16 @@ Contém as funções responsáveis pelas operações matemáticas:
 * O `menu.py` passou a ser responsável pela exibição do menu principal
 * Mantido o funcionamento do fluxo principal da calculadora
 
+### V3.6
+
+* Criado o módulo `apresentacao.py`
+* Movidas as funções `simbolo_operacao()` e `mostrar_resultado()` para um módulo separado
+* Movida a constante `SIMBOLOS_OPERACOES` para o módulo `apresentacao`
+* Atualizado o `main.py` para importar e utilizar o módulo `apresentacao`
+* Melhorada a organização e separação de responsabilidades do projeto
+* Centralizada a apresentação dos resultados e símbolos das operações
+* Mantido o funcionamento do cálculo, exibição dos resultados e histórico
+
 
 ## 🔮 Próximas versões
 
