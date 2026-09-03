@@ -1,5 +1,5 @@
 #==============================IMPORT==============================
-import calculos, historico, entradas
+import calculos, historico, entradas, validacoes
 
 #==============================CONSTANTE==============================
 OPERACOES_VALIDAS = ["1", "2", "3", "4"]
@@ -37,14 +37,6 @@ def realizar_calculo(operacao, numero1, numero2):
 def simbolo_operacao(operacao):
     return SIMBOLOS_OPERACOES[operacao]
 
-#=====        Validar Operação        =====
-def validar_operacao(operacao):
-    if operacao in OPERACOES_VALIDAS:
-        return True
-
-    else:
-        return False
-
 #=====        Exibir Resultado        =====
 def mostrar_resultado(numero1, numero2, operacao, resultado):
     print(f"{numero1} {simbolo_operacao(operacao)} {numero2} = {resultado}")
@@ -53,7 +45,7 @@ def mostrar_resultado(numero1, numero2, operacao, resultado):
 def main():
     #==============================APRESENTAÇÃO==============================
     print("\n===== CALCULADORA BASICA =====")
-    print("=====        V3.3        =====")
+    print("=====        V3.4        =====")
 
     #==============================LISTA PARA HISTÓRICO DE CALCULOS==============================
     lista_historico = []
@@ -77,7 +69,7 @@ def main():
             continue
 
         #==============================VERIFICAÇÃO DA OPERAÇÃO==============================
-        if not validar_operacao(operacao):
+        if not validacoes.validar_operacao(operacao, OPERACOES_VALIDAS):
             print("\nOpção inválida!")
             continue
 

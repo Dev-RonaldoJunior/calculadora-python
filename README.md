@@ -244,6 +244,15 @@ Contém as funções responsáveis pelas operações matemáticas:
 * Mantido o tratamento de valores inválidos nas funções de entrada
 * Mantido o fluxo principal da calculadora funcionando normalmente
 
+### V3.4
+
+* Criado o módulo `validacoes.py`
+* Movida a função `validar_operacao()` para um módulo separado
+* Atualizado o `main.py` para importar e utilizar o módulo `validacoes`
+* A lista `OPERACOES_VALIDAS` passou a ser enviada como parâmetro para a função de validação
+* Melhorada a organização e separação de responsabilidades do projeto
+* Mantida a validação das operações matemáticas disponíveis
+
 
 ## 🔮 Próximas versões
 
