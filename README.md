@@ -182,6 +182,13 @@ Contém as funções responsáveis pelas operações matemáticas:
 * Opções inválidas não encerram mais o submenu
 * Melhorado o fluxo de navegação do menu de histórico
 
+### V2.7
+
+* Implementada repetição da confirmação para limpar o histórico
+* Adicionado `while True` na função `limpar_historico()`
+* Respostas `S` e `N` encerram a confirmação com `break`
+* Respostas inválidas continuam solicitando uma nova opção
+* Melhorado o fluxo de limpeza do histórico
 
 
 ## 🔮 Próximas versões

@@ -26,22 +26,25 @@ def limpar_historico(historico):
     print("\nTem certeza que deseja apagar o histórico da calculadora?")
     print("S para sim e N para Não")
     
-    operacao = input("Opção: ")
-    
-    operacao = operacao.upper()
 
-    #Positivo
-    if operacao == "S":
-        historico.clear()
-        print("Histórico Limpo.")
+    while True:
+        operacao = input("Opção: ")
+        
+        operacao = operacao.upper()
+        #Positivo
+        if operacao == "S":
+            historico.clear()
+            print("Histórico Limpo.")
+            break
 
-    #Negativo
-    elif operacao == "N":
-        print("\nHistórico não apagado")
+        #Negativo
+        elif operacao == "N":
+            print("\nHistórico não apagado")
+            break
 
-    #Invalido
-    else:
-        print("\nOpção inválida!")
+        #Invalido
+        else:
+            print("\nOpção inválida!")
 
 #=====        Sub Menu do Histórico        =====
 def menu_historico(historico):
@@ -130,7 +133,7 @@ def validar_operacao(operacao):
 def main():
     #==============================APRESENTAÇÃO==============================
     print("\n===== CALCULADORA BASICA =====")
-    print("=====        V2.6        =====")
+    print("=====        V2.7        =====")
 
     #==============================LISTA PARA HISTÓRICO DE CALCULOS==============================
     historico = []
