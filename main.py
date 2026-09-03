@@ -4,6 +4,12 @@ import calculos
 #==============================CONSTANTE==============================
 OPERACOES_VALIDAS = ["1", "2", "3", "4"]
 
+SIMBOLOS_OPERACOES = {
+    "1": "+",
+    "2": "-",
+    "3": "x",
+    "4": "÷"
+}
 #==============================FUNÇÕES==============================
 #=====        Mostrar Menu        =====
 def mostrar_menu():
@@ -111,18 +117,7 @@ def realizar_calculo(operacao, numero1, numero2):
 
 #=====        Símbolo da Operação        =====
 def simbolo_operacao(operacao):
-
-    if operacao == "1":
-        return "+"
-
-    elif operacao == "2":
-        return "-"
-
-    elif operacao == "3":
-        return "x"
-
-    elif operacao == "4":
-        return "÷"
+    return SIMBOLOS_OPERACOES[operacao]
 
 #=====        Validar Operação        =====
 def validar_operacao(operacao):
@@ -140,7 +135,7 @@ def mostrar_resultado(numero1, numero2, operacao, resultado):
 def main():
     #==============================APRESENTAÇÃO==============================
     print("\n===== CALCULADORA BASICA =====")
-    print("=====        V2.9        =====")
+    print("=====        V3.0        =====")
 
     #==============================LISTA PARA HISTÓRICO DE CALCULOS==============================
     historico = []

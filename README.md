@@ -206,6 +206,15 @@ Contém as funções responsáveis pelas operações matemáticas:
 * Melhorada a organização e manutenção do código
 * Reduzida a repetição das opções válidas no processo de validação
 
+### V3.0
+
+* Criada a constante `SIMBOLOS_OPERACOES`
+* Centralizados os símbolos das operações em um dicionário
+* Atualizada a função `simbolo_operacao()` para utilizar o dicionário
+* Removidos os `if/elif` da função `simbolo_operacao()`
+* Melhorada a organização e manutenção dos símbolos das operações
+* Mantido o uso dos símbolos no resultado e no histórico
+
 
 ## 🔮 Próximas versões
 
