@@ -10,6 +10,14 @@ SIMBOLOS_OPERACOES = {
     "3": "x",
     "4": "÷"
 }
+
+OPERACOES_CALCULO = {
+    "1": calculos.somar,
+    "2": calculos.subtrair,
+    "3": calculos.multiplicar,
+    "4": calculos.dividir
+}
+
 #==============================FUNÇÕES==============================
 #=====        Mostrar Menu        =====
 def mostrar_menu():
@@ -98,22 +106,7 @@ def input_numero2():
 
 #=====        Calcular        =====
 def realizar_calculo(operacao, numero1, numero2):
-
-    #==============================ADIÇÃO==============================
-    if operacao == "1":
-        return calculos.somar(numero1, numero2)
-
-    #==============================SUBTRAÇÃO==============================
-    elif operacao == "2":
-        return calculos.subtrair(numero1, numero2)
-
-    #==============================MULTIPLICAÇÃO==============================
-    elif operacao == "3":
-        return calculos.multiplicar(numero1, numero2)
-
-    #==============================DIVISÃO==============================
-    elif operacao == "4":
-        return calculos.dividir(numero1, numero2)
+    return OPERACOES_CALCULO[operacao](numero1, numero2)
 
 #=====        Símbolo da Operação        =====
 def simbolo_operacao(operacao):
@@ -135,7 +128,7 @@ def mostrar_resultado(numero1, numero2, operacao, resultado):
 def main():
     #==============================APRESENTAÇÃO==============================
     print("\n===== CALCULADORA BASICA =====")
-    print("=====        V3.0        =====")
+    print("=====        V3.1        =====")
 
     #==============================LISTA PARA HISTÓRICO DE CALCULOS==============================
     historico = []

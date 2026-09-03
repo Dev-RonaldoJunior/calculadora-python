@@ -215,6 +215,15 @@ Contém as funções responsáveis pelas operações matemáticas:
 * Melhorada a organização e manutenção dos símbolos das operações
 * Mantido o uso dos símbolos no resultado e no histórico
 
+### V3.1
+
+* Criada a constante `OPERACOES_CALCULO`
+* Centralizadas as funções de cálculo em um dicionário
+* Atualizada a função `realizar_calculo()` para utilizar o dicionário
+* Removidos os `if/elif` da função `realizar_calculo()`
+* Melhorada a organização e manutenção das operações matemáticas
+* Mantida a integração com o módulo `calculos.py`
+
 
 ## 🔮 Próximas versões
 
