@@ -1,5 +1,5 @@
 #==============================IMPORT==============================
-import calculos, historico, entradas, validacoes
+import calculos, historico, entradas, validacoes, menu
 
 #==============================CONSTANTE==============================
 OPERACOES_VALIDAS = ["1", "2", "3", "4"]
@@ -18,17 +18,7 @@ OPERACOES_CALCULO = {
     "4": calculos.dividir
 }
 
-#==============================FUNÇÕES==============================
-#=====        Mostrar Menu        =====
-def mostrar_menu():
-    print("\nEscolha uma operação:")
-    print("0 - Fechar Calculadora")
-    print("1 - Soma")
-    print("2 - Subtração")
-    print("3 - Multiplicação")
-    print("4 - Divisão")
-    print("5 - Histórico")
-                    
+#==============================FUNÇÕES==============================                    
 #=====        Calcular        =====
 def realizar_calculo(operacao, numero1, numero2):
     return OPERACOES_CALCULO[operacao](numero1, numero2)
@@ -45,7 +35,7 @@ def mostrar_resultado(numero1, numero2, operacao, resultado):
 def main():
     #==============================APRESENTAÇÃO==============================
     print("\n===== CALCULADORA BASICA =====")
-    print("=====        V3.4        =====")
+    print("=====        V3.5        =====")
 
     #==============================LISTA PARA HISTÓRICO DE CALCULOS==============================
     lista_historico = []
@@ -53,7 +43,7 @@ def main():
     #==============================LOOP==============================
     while True:
 
-        mostrar_menu()
+        menu.mostrar_menu()
 
         #==============================INPUT DA OPÇÃO DE FUNÇÃO==============================
         operacao = input("\nOpção: ")

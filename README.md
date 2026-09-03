@@ -253,6 +253,15 @@ Contém as funções responsáveis pelas operações matemáticas:
 * Melhorada a organização e separação de responsabilidades do projeto
 * Mantida a validação das operações matemáticas disponíveis
 
+### V3.5
+
+* Criado o módulo `menu.py`
+* Movida a função `mostrar_menu()` para um módulo separado
+* Atualizado o `main.py` para importar e utilizar o módulo `menu`
+* Melhorada a organização e separação de responsabilidades do projeto
+* O `menu.py` passou a ser responsável pela exibição do menu principal
+* Mantido o funcionamento do fluxo principal da calculadora
+
 
 ## 🔮 Próximas versões
 
