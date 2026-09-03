@@ -198,6 +198,14 @@ Contém as funções responsáveis pelas operações matemáticas:
 * Reutilização da função `simbolo_operacao()`
 * Organização da exibição do resultado dentro de uma função própria
 
+### V2.9
+
+* Criada a constante `OPERACOES_VALIDAS`
+* Centralizada a definição das operações matemáticas disponíveis
+* Atualizada a função `validar_operacao()` para utilizar a constante
+* Melhorada a organização e manutenção do código
+* Reduzida a repetição das opções válidas no processo de validação
+
 
 ## 🔮 Próximas versões
 

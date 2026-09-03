@@ -1,5 +1,8 @@
-#==============================IMPORT MODULADO==============================
+#==============================IMPORT==============================
 import calculos
+
+#==============================CONSTANTE==============================
+OPERACOES_VALIDAS = ["1", "2", "3", "4"]
 
 #==============================FUNÇÕES==============================
 #=====        Mostrar Menu        =====
@@ -123,7 +126,7 @@ def simbolo_operacao(operacao):
 
 #=====        Validar Operação        =====
 def validar_operacao(operacao):
-    if operacao in ["1", "2", "3", "4"]:
+    if operacao in OPERACOES_VALIDAS:
         return True
 
     else:
@@ -137,7 +140,7 @@ def mostrar_resultado(numero1, numero2, operacao, resultado):
 def main():
     #==============================APRESENTAÇÃO==============================
     print("\n===== CALCULADORA BASICA =====")
-    print("=====        V2.8        =====")
+    print("=====        V2.9        =====")
 
     #==============================LISTA PARA HISTÓRICO DE CALCULOS==============================
     historico = []
