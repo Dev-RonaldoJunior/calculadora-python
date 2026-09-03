@@ -129,11 +129,15 @@ def validar_operacao(operacao):
     else:
         return False
 
+#=====        Exibir Resultado        =====
+def mostrar_resultado(numero1, numero2, operacao, resultado):
+    print(f"{numero1} {simbolo_operacao(operacao)} {numero2} = {resultado}")
+
 #=====        Função Principal       =====
 def main():
     #==============================APRESENTAÇÃO==============================
     print("\n===== CALCULADORA BASICA =====")
-    print("=====        V2.7        =====")
+    print("=====        V2.8        =====")
 
     #==============================LISTA PARA HISTÓRICO DE CALCULOS==============================
     historico = []
@@ -174,7 +178,7 @@ def main():
         resultado = realizar_calculo(operacao, numero1, numero2)
 
         #==============================EXIBIR RESULTADO==============================
-        print("Resultado:", resultado)
+        mostrar_resultado(numero1, numero2, operacao, resultado)
 
         #==============================ADICIONAR AO HISTÓRICO==============================
         simbolo = simbolo_operacao(operacao)

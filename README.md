@@ -190,6 +190,14 @@ Contém as funções responsáveis pelas operações matemáticas:
 * Respostas inválidas continuam solicitando uma nova opção
 * Melhorado o fluxo de limpeza do histórico
 
+### V2.8
+
+* Criada a função `mostrar_resultado()`
+* Melhorada a apresentação dos resultados
+* Exibição da operação completa com seus respectivos números
+* Reutilização da função `simbolo_operacao()`
+* Organização da exibição do resultado dentro de uma função própria
+
 
 ## 🔮 Próximas versões
 
