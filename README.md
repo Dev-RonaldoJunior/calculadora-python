@@ -1,59 +1,35 @@
 # 🧮 Calculadora Básica em Python
 
-Projeto desenvolvido em Python com o objetivo de praticar lógica de programação, funções, modularização, validação de entradas, organização de código e controle de versões utilizando Git e GitHub.
+Projeto desenvolvido em Python com o objetivo de praticar lógica de programação, organização de código, modularização e evolução incremental de um projeto utilizando Git e GitHub.
 
----
+## 📌 Sobre o projeto
 
-## 📌 Sobre o Projeto
+A **Calculadora Básica em Python** começou como uma aplicação simples executada pelo terminal e foi evoluindo gradualmente, recebendo novas funcionalidades e melhorias de organização.
 
-A **Calculadora Básica em Python** é uma aplicação executada pelo terminal que permite realizar operações matemáticas e manter um histórico dos cálculos realizados durante a execução.
+O projeto utiliza módulos separados por responsabilidade, mantendo uma estrutura simples e evitando uma modularização excessiva.
 
-O projeto foi desenvolvido de forma incremental, adicionando novas funcionalidades e reorganizando sua estrutura conforme a evolução do código.
+Atualmente, a calculadora possui operações matemáticas, sistema de histórico e validação de entradas.
 
-Atualmente, a calculadora possui:
+## 🚀 Funcionalidades
 
 * ➕ Soma
 * ➖ Subtração
 * ✖️ Multiplicação
 * ➗ Divisão
 * 📊 Porcentagem
-* 📋 Histórico de cálculos
+* 🔢 Potência
+* 📜 Visualização do histórico
 * 🗑️ Limpeza do histórico
-* ✅ Validação de operações
-* 🔢 Validação de números
-* 🚫 Tratamento de divisão por zero
+* ⚠️ Validação de operações
+* ⚠️ Tratamento de entradas numéricas inválidas
+* ⚠️ Tratamento de divisão por zero
+* 🔄 Repetição de menus e entradas inválidas
+* 💻 Execução pelo terminal
 
----
-
-## 📐 Versionamento
-
-Este projeto utiliza **Semantic Versioning (SemVer)** no formato:
-
-```text
-MAJOR.MINOR.PATCH
-```
-
-* **MAJOR** → alterações grandes ou incompatíveis.
-* **MINOR** → novas funcionalidades compatíveis.
-* **PATCH** → correções de bugs e pequenas correções.
-
-Exemplo:
-
-```text
-1.27.0
-│ │  │
-│ │  └── PATCH
-│ └───── MINOR
-└─────── MAJOR
-```
-
----
-
-## 🗂️ Estrutura do Projeto
+## 📁 Estrutura do projeto
 
 ```text
 calculadora-python/
-│
 ├── main.py
 ├── calculos.py
 ├── historico.py
@@ -65,302 +41,278 @@ calculadora-python/
 └── LICENSE
 ```
 
+## 🧩 Organização dos módulos
+
 ### `main.py`
 
 Responsável pelo fluxo principal da aplicação:
 
-* Exibição do menu;
-* Controle do loop principal;
-* Seleção das operações;
-* Integração entre os módulos;
-* Execução dos cálculos;
-* Controle do histórico.
+* Exibição do menu principal
+* Controle da execução da calculadora
+* Validação da operação escolhida
+* Recebimento dos números
+* Execução dos cálculos
+* Armazenamento dos resultados no histórico
 
 ### `calculos.py`
 
-Contém as funções responsáveis exclusivamente pelos cálculos matemáticos:
+Contém as funções responsáveis pelas operações matemáticas:
 
 * `somar()`
 * `subtrair()`
 * `multiplicar()`
 * `dividir()`
 * `porcentagem()`
+* `potencia()`
 
 ### `historico.py`
 
 Responsável pelo gerenciamento do histórico:
 
-* Exibição dos cálculos;
-* Limpeza do histórico;
-* Menu do histórico.
+* Visualização dos cálculos realizados
+* Limpeza do histórico
+* Menu do histórico
+* Confirmação antes da exclusão
 
 ### `entradas.py`
 
-Responsável pela entrada dos números e tratamento de valores inválidos.
+Responsável pelo recebimento e validação dos números informados pelo usuário.
 
 ### `validacoes.py`
 
-Responsável pelas validações das operações escolhidas pelo usuário.
+Responsável pela validação das operações disponíveis na calculadora.
 
 ### `apresentacao.py`
 
-Responsável pela apresentação dos resultados e pelos símbolos das operações.
+Responsável pela apresentação dos resultados e símbolos das operações.
 
----
+## 🛠️ Tecnologias utilizadas
 
-## ⚙️ Funcionalidades
+* **Python**
+* **Git**
+* **GitHub**
+* **GitHub Desktop**
+* **Visual Studio Code**
 
-### Operações matemáticas
+## 📦 Versionamento
 
-A calculadora permite realizar:
-
-```text
-1 - Soma
-2 - Subtração
-3 - Multiplicação
-4 - Divisão
-5 - Porcentagem
-```
-
-A operação de porcentagem calcula:
+O projeto utiliza **Semantic Versioning (SemVer)**:
 
 ```text
-X% de Y
+MAJOR.MINOR.PATCH
 ```
 
-Exemplo:
+* **MAJOR:** alterações grandes ou incompatíveis.
+* **MINOR:** novas funcionalidades compatíveis com a versão anterior.
+* **PATCH:** correções de bugs e pequenas correções.
 
-```text
-15% de 200 = 30
-```
+## 📚 Histórico de versões
 
-### Histórico
+### 1.0.0
 
-Os cálculos realizados durante a execução são armazenados em uma lista e podem ser consultados através da opção:
+* Criada a calculadora básica.
+* Implementadas as operações de soma, subtração, multiplicação e divisão.
+* Criado menu principal.
+* Adicionada opção para encerrar a aplicação.
 
-```text
-6 - Histórico
-```
+### 1.1.0
 
-O histórico permite:
+* Adicionado tratamento para entradas inválidas.
+* Adicionado tratamento de divisão por zero.
 
-```text
-1 - Ver histórico
-2 - Limpar Histórico
-```
+### 1.2.0
 
-A limpeza do histórico possui confirmação antes da exclusão dos dados.
+* Criado sistema inicial de histórico de cálculos.
 
----
+### 1.3.0
 
-## 🛠️ Tecnologias
+* Adicionada visualização do histórico.
+* Adicionada mensagem para histórico vazio.
 
-* 🐍 Python
-* 💻 VS Code
-* 🔀 Git
-* 🐙 GitHub
-* 🖥️ GitHub Desktop
+### 1.4.0
 
----
+* Adicionada opção para limpar o histórico.
+* Criado submenu de histórico.
 
-## 📚 Histórico de Versões
+### 1.5.0
 
-### 1.27.0
+* Adicionada confirmação antes da limpeza do histórico.
+* Implementadas opções de confirmação e cancelamento.
 
-* Adicionada a operação de porcentagem.
-* Criada a função `porcentagem()` em `calculos.py`.
-* Adicionada a opção de porcentagem ao menu principal.
-* Integrada a porcentagem ao dicionário de operações.
-* Adicionado o símbolo `%`.
-* Criada a função `formatar_resultado()` em `apresentacao.py`.
-* Adicionada formatação específica para porcentagem.
-* Ajustado o armazenamento do resultado formatado no histórico.
-* Mantidas as operações e funcionalidades existentes.
+### 1.6.0
 
-### 1.26.1
+* Criado o módulo `calculos.py`.
+* Operações matemáticas separadas em funções.
+* Implementado sistema de importação das funções.
 
-* Corrigida a estrutura de modularização do projeto.
-* Removido o `menu.py` após revisão arquitetural.
-* Restaurada a função `mostrar_menu()` no `main.py`.
-* Mantida a separação de responsabilidades dos demais módulos.
+### 1.7.0
 
-### 1.26.0
+* Criada a função `mostrar_menu()`.
 
-* Criado o módulo `apresentacao.py`.
-* Movida a função `simbolo_operacao()` para o novo módulo.
-* Movida a função `mostrar_resultado()` para o novo módulo.
-* Movido o dicionário `SIMBOLOS_OPERACOES` para o novo módulo.
+### 1.8.0
 
-### 1.25.0
+* Criada a função `mostrar_historico()`.
+* Criada a função `limpar_historico()`.
+* Histórico passou a ser recebido como parâmetro.
 
-* Criado o módulo `menu.py`.
-* Separada a função responsável pelo menu em um módulo próprio.
-* Posteriormente revisado e revertido na versão `1.26.1` por excesso de modularização.
+### 1.9.0
 
-### 1.24.0
+* Criada a função `input_numero()` para entrada dos números.
 
-* Criado o módulo `validacoes.py`.
-* Movida a função `validar_operacao()` para o novo módulo.
-* A lista de operações válidas passou a ser enviada como parâmetro.
+### 1.10.0
 
-### 1.23.0
+* Criada a função `realizar_calculo()`.
+* Criada a função `simbolo_operacao()`.
+* Implementada validação da operação antes da entrada dos números.
+* Melhorado o tratamento da divisão por zero.
+* Melhorada a formatação do histórico.
+* Corrigido o nome da função `imput_numero()` para `input_numero()`.
 
-* Criado o módulo `entradas.py`.
-* Movidas as funções de entrada de números para o novo módulo.
-* Separada a responsabilidade de entrada de dados do fluxo principal.
+### 1.11.0
+
+* Criada a função `main()`.
+* Transferido o fluxo principal da aplicação para `main()`.
+* Adicionado `if __name__ == "__main__":`.
+* Estrutura preparada para futuros testes.
+
+### 1.12.0
+
+* Criada a função `menu_historico()`.
+
+### 1.13.0
+
+* Criada a função `validar_operacao()`.
+
+### 1.14.0
+
+* Criadas as funções `input_numero1()` e `input_numero2()`.
+
+### 1.15.0
+
+* Implementada repetição da entrada de números inválidos.
+* Melhorado o tratamento de exceções nas entradas numéricas.
+
+### 1.16.0
+
+* Implementada repetição do submenu de histórico em caso de opção inválida.
+
+### 1.17.0
+
+* Implementada repetição da confirmação de limpeza do histórico em caso de opção inválida.
+
+### 1.18.0
+
+* Criada a função `mostrar_resultado()`.
+
+### 1.19.0
+
+* Criada a constante `OPERACOES_VALIDAS`.
+
+### 1.20.0
+
+* Criado o dicionário `SIMBOLOS_OPERACOES`.
+
+### 1.21.0
+
+* Criado o dicionário `OPERACOES_CALCULO`.
+* Centralizado o relacionamento entre opções e funções matemáticas.
 
 ### 1.22.0
 
 * Criado o módulo `historico.py`.
 * Movidas as funções relacionadas ao histórico para o novo módulo.
-* Separada a responsabilidade de gerenciamento do histórico.
 
-### 1.21.0
+### 1.23.0
 
-* Criado o dicionário `OPERACOES_CALCULO`.
-* Associadas as opções do menu diretamente às funções de cálculo.
-* Simplificada a seleção das operações.
+* Criado o módulo `entradas.py`.
+* Movidas as funções de entrada de números para o novo módulo.
 
-### 1.20.0
+### 1.24.0
 
-* Criado o dicionário `SIMBOLOS_OPERACOES`.
-* Centralizada a representação dos símbolos matemáticos.
+* Criado o módulo `validacoes.py`.
+* Movida a função `validar_operacao()` para o novo módulo.
+* `OPERACOES_VALIDAS` passou a ser recebida como parâmetro.
 
-### 1.19.0
+### 1.25.0
 
-* Criada a constante `OPERACOES_VALIDAS`.
-* Centralizada a lista de operações aceitas pelo programa.
+* Avaliada a separação das responsabilidades relacionadas ao menu.
+* A criação do módulo `menu.py` foi posteriormente revertida para evitar modularização excessiva.
 
-### 1.18.0
+### 1.26.0
 
-* Criada a função `mostrar_resultado()`.
-* Centralizada a exibição dos resultados.
+* Criado o módulo `apresentacao.py`.
+* Movidas as funções relacionadas à apresentação dos resultados.
+* Movida a constante `SIMBOLOS_OPERACOES`.
 
-### 1.17.0
+### 1.26.1
 
-* Implementada repetição do submenu do histórico em caso de opção inválida.
+* Corrigida a arquitetura após revisão.
+* Removido o módulo `menu.py`.
+* Restaurada a função `mostrar_menu()` no `main.py`.
+* Removido import desnecessário relacionado ao módulo excluído.
+* Mantida a separação de responsabilidades sem excesso de modularização.
 
-### 1.16.0
+### 1.27.0
 
-* Implementada repetição da confirmação de limpeza do histórico em caso de opção inválida.
+* Adicionada a operação de porcentagem.
+* Criada a função `porcentagem()` em `calculos.py`.
+* Adicionada a porcentagem ao menu principal.
+* Integrada a nova operação ao dicionário `OPERACOES_CALCULO`.
+* Adicionado o símbolo `%` em `apresentacao.py`.
+* Criada a função `formatar_resultado()`.
+* Implementada formatação específica para cálculos de porcentagem.
+* Resultados formatados passaram a ser armazenados no histórico.
 
-### 1.15.0
+### 1.28.0
 
-* Criada a função `input_numero()`.
-* Centralizada a entrada dos números.
+* Adicionada a operação de potência.
+* Criada a função `potencia()` em `calculos.py`.
+* Adicionada a potência ao menu principal.
+* Integrada a nova operação ao dicionário `OPERACOES_CALCULO`.
+* Adicionado o símbolo `^` em `apresentacao.py`.
+* Ajustada a opção do histórico para a posição 7.
+* Implementada a potência utilizando repetição com `while`.
+* Mantido o armazenamento dos cálculos de potência no histórico.
 
-### 1.14.0
+## 🔮 Próximas versões
 
-* Criada a função `validar_operacao()`.
-* Centralizada a validação da operação escolhida.
+O projeto continuará evoluindo gradualmente, priorizando aprendizado, organização e boas práticas de desenvolvimento.
 
-### 1.13.0
+Possíveis evoluções:
 
-* Criada a função `menu_historico()`.
-* Criado submenu específico para gerenciamento do histórico.
+* Melhorias nas operações matemáticas
+* Expansão do sistema de histórico
+* Persistência dos cálculos
+* Exportação do histórico
+* Melhor tratamento de exceções
+* Implementação de testes automatizados
+* Interface gráfica
+* Novos recursos para a calculadora
 
-### 1.12.0
+## ▶️ Como executar
 
-* Criada a função `main()`.
-* Movido o loop principal para a função principal.
-* Adicionado `if __name__ == "__main__":`.
-* Preparado o projeto para facilitar testes.
+Certifique-se de ter o Python instalado.
 
-### 1.11.0
-
-* Criada a função `realizar_calculo()`.
-* Criada a função `simbolo_operacao()`.
-* Melhorada a organização da execução dos cálculos.
-* Corrigido o nome da função `imput_numero()` para `input_numero()`.
-
-### 1.10.0
-
-* Separadas as operações matemáticas em funções.
-* Criado o arquivo `calculos.py`.
-* Adicionado o import do módulo de cálculos.
-
-### 1.9.0
-
-* Implementado tratamento de entradas inválidas para números.
-
-### 1.8.0
-
-* Implementada confirmação antes de apagar o histórico.
-* Adicionadas opções de confirmação e cancelamento.
-
-### 1.7.0
-
-* Implementada limpeza do histórico.
-
-### 1.6.0
-
-* Adicionada visualização do histórico.
-* Criada mensagem para histórico vazio.
-
-### 1.5.0
-
-* Criado o histórico de cálculos.
-
-### 1.4.0
-
-* Implementado tratamento de divisão por zero.
-
-### 1.3.0
-
-* Implementado tratamento de opções inválidas.
-
-### 1.2.0
-
-* Implementado menu principal.
-* Adicionada opção para encerrar a calculadora.
-
-### 1.1.0
-
-* Implementadas as operações básicas:
-
-  * Soma
-  * Subtração
-  * Multiplicação
-  * Divisão
-
-### 1.0.0
-
-* Criada a primeira versão funcional da calculadora.
-
----
-
-## 🚀 Próximas Versões
-
-O projeto continuará evoluindo de forma incremental, priorizando melhorias que contribuam para o aprendizado e para a qualidade do código.
-
-As próximas funcionalidades serão definidas conforme a evolução do projeto.
-
----
-
-## ▶️ Como Executar
-
-### 1. Clone o repositório
+Clone o repositório:
 
 ```bash
 git clone https://github.com/Dev-RonaldoJunior/calculadora-python.git
 ```
 
-### 2. Acesse a pasta do projeto
+Entre na pasta:
 
 ```bash
 cd calculadora-python
 ```
 
-### 3. Execute o programa
+Execute:
 
 ```bash
 python main.py
 ```
 
----
-
 ## 👨‍💻 Autor
 
 **Ronaldo José da Silva Junior**
 
-Projeto desenvolvido para estudos, prática de programação em Python e construção de portfólio profissional.
+Projeto desenvolvido para estudos e construção de portfólio em Python.

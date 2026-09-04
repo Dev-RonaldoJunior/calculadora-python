@@ -2,14 +2,15 @@
 import calculos, historico, entradas, validacoes, apresentacao
 
 #==============================CONSTANTE==============================
-OPERACOES_VALIDAS = ["1", "2", "3", "4", "5"]
+OPERACOES_VALIDAS = ["1", "2", "3", "4", "5", "6"]
 
 OPERACOES_CALCULO = {
     "1": calculos.somar,
     "2": calculos.subtrair,
     "3": calculos.multiplicar,
     "4": calculos.dividir,
-    "5": calculos.porcentagem
+    "5": calculos.porcentagem,
+    "6": calculos.potencia
 }
 
 #==============================FUNÇÕES==============================                    
@@ -26,13 +27,14 @@ def mostrar_menu():
     print("3 - Multiplicação")
     print("4 - Divisão")
     print("5 - Porcentagem")
-    print("6 - Histórico")
+    print('6 - Potência')
+    print("7 - Histórico")
 
 #=====        Função Principal       =====
 def main():
     #==============================APRESENTAÇÃO==============================
     print("\n===== CALCULADORA BASICA =====")
-    print("=====        V1.27.0        =====")
+    print("=====        V1.28.0        =====")
 
     #==============================LISTA PARA HISTÓRICO DE CALCULOS==============================
     lista_historico = []
@@ -51,7 +53,7 @@ def main():
             break
 
         #==============================HISTÓRICO==============================
-        elif operacao == "6":
+        elif operacao == "7":
             historico.menu_historico(lista_historico)
             continue
 
