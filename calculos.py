@@ -1,15 +1,19 @@
-#==============================Função de adição==============================
+#=====        Função de Adição        =====
 def somar(n1, n2):
     return n1 + n2
 
-#==============================Função de subtração==============================
+#=====        Função de Subtração        =====
 def subtrair(n1, n2):
     return n1 - n2
 
-#==============================Função de multiplicação==============================
+#=====        Função de Multiplicação        =====
 def multiplicar(n1, n2):
     return n1 * n2
 
-#==============================Função de divisão==============================
+#=====        Função de Divisão        =====
 def dividir(n1, n2):
     return n1 / n2
+
+#=====        Função de Porcentagem        =====
+def porcentagem(n1, n2):
+    return n1 * n2 / 100

@@ -2,13 +2,14 @@
 import calculos, historico, entradas, validacoes, apresentacao
 
 #==============================CONSTANTE==============================
-OPERACOES_VALIDAS = ["1", "2", "3", "4"]
+OPERACOES_VALIDAS = ["1", "2", "3", "4", "5"]
 
 OPERACOES_CALCULO = {
     "1": calculos.somar,
     "2": calculos.subtrair,
     "3": calculos.multiplicar,
-    "4": calculos.dividir
+    "4": calculos.dividir,
+    "5": calculos.porcentagem
 }
 
 #==============================FUNÇÕES==============================                    
@@ -24,13 +25,14 @@ def mostrar_menu():
     print("2 - Subtração")
     print("3 - Multiplicação")
     print("4 - Divisão")
-    print("5 - Histórico")
+    print("5 - Porcentagem")
+    print("6 - Histórico")
 
 #=====        Função Principal       =====
 def main():
     #==============================APRESENTAÇÃO==============================
     print("\n===== CALCULADORA BASICA =====")
-    print("=====        V3.6        =====")
+    print("=====        V1.27.0        =====")
 
     #==============================LISTA PARA HISTÓRICO DE CALCULOS==============================
     lista_historico = []
@@ -49,7 +51,7 @@ def main():
             break
 
         #==============================HISTÓRICO==============================
-        elif operacao == "5":
+        elif operacao == "6":
             historico.menu_historico(lista_historico)
             continue
 
@@ -71,11 +73,12 @@ def main():
         resultado = realizar_calculo(operacao, numero1, numero2)
 
         #==============================EXIBIR RESULTADO==============================
-        apresentacao.mostrar_resultado(numero1, numero2, operacao, resultado)
+        resultado_formatado = apresentacao.formatar_resultado(numero1, numero2, operacao, resultado)
+
+        print(resultado_formatado)
 
         #==============================ADICIONAR AO HISTÓRICO==============================
-        simbolo = apresentacao.simbolo_operacao(operacao)
-        lista_historico.append(f"{numero1} {simbolo} {numero2} = {resultado}")
+        lista_historico.append(resultado_formatado)
 
 #=======================================================================================================================================================#
 #=================================================================CALCULADORA FUNCIONANDO===============================================================#
