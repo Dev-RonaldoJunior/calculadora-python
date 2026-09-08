@@ -160,7 +160,7 @@ MAJOR.MINOR.PATCH
 
 ### Versão atual
 
-**1.31.0**
+**1.32.0**
 
 Principais características da versão atual:
 

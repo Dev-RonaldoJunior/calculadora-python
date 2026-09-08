@@ -34,7 +34,7 @@ def mostrar_menu():
 def main():
     #==============================APRESENTAÇÃO==============================
     print("\n===== CALCULADORA BASICA =====")
-    print("=====        V1.31.0        =====")
+    print("=====        V1.32.0        =====")
 
     #==============================LISTA PARA HISTÓRICO DE CALCULOS==============================
     lista_historico = []
@@ -63,8 +63,8 @@ def main():
             continue
 
         #==============================INPUT DOS NÚMEROS==============================
-        numero1 = entradas.input_numero1()
-        numero2 = entradas.input_numero2()
+        numero1 = entradas.input_numero("\nDigite o primeiro número: ")
+        numero2 = entradas.input_numero("\nDigite o segundo número: ")
 
         #==============================TRATAMENTO DE DIVISÃO POR ZERO==============================
         if operacao == "4" and numero2 == 0:
