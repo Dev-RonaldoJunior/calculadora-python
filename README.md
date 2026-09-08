@@ -271,8 +271,15 @@ MAJOR.MINOR.PATCH
 * Integrada a nova operação ao dicionário `OPERACOES_CALCULO`.
 * Adicionado o símbolo `^` em `apresentacao.py`.
 * Ajustada a opção do histórico para a posição 7.
-* Implementada a potência utilizando repetição com `while`.
-* Mantido o armazenamento dos cálculos de potência no histórico.
+* Implementada inicialmente a potência utilizando repetição com `while`.
+
+### 1.29.0
+
+* Melhorada a implementação da operação de potência.
+* Substituída a implementação manual da potência pelo operador nativo `**` do Python.
+* Adicionado suporte a expoentes negativos.
+* Mantido o suporte a expoentes positivos e ao expoente zero.
+* Mantidas as demais funcionalidades da calculadora.
 
 ## 🔮 Próximas versões
 

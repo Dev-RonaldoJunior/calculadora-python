@@ -20,12 +20,4 @@ def porcentagem(n1, n2):
 
 #=====        Função de Potência       =====
 def potencia(n1, n2):
-    pdn = n2
-    res = 1
-    while True:
-        if pdn > 0:
-            resut = res * n1
-            res = resut
-            pdn -= 1
-        else:
-            return res
+    return n1 ** n2
