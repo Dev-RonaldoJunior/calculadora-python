@@ -5,7 +5,7 @@ def input_numero1():
             numero1 = float(input("\nDigite o primeiro número: "))
             return numero1
 
-        except:
+        except ValueError:
             print("\nValor digitado invalido!")
             print("Digite apenas numero.")
         
@@ -15,6 +15,6 @@ def input_numero2():
         try:
             numero2 = float(input("\nDigite o segundo número: "))
             return numero2
-        except:
+        except ValueError:
             print("\nValor digitado invalido!")
             print("Digite apenas numero.")
