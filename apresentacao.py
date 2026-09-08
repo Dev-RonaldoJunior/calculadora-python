@@ -14,9 +14,9 @@ def simbolo_operacao(operacao):
 #=====        Formatar Resultado        =====
 def formatar_resultado(numero1, numero2, operacao, resultado):
     if operacao == "5":
-        return f"{numero1}{simbolo_operacao(operacao)} de {numero2} = {resultado}"
+        return f"{numero1:.10g}{simbolo_operacao(operacao)} de {numero2:.10g} = {resultado:.10g}"
     else:
-        return f"{numero1} {simbolo_operacao(operacao)} {numero2} = {resultado}"
+        return f"{numero1:.10g} {simbolo_operacao(operacao)} {numero2:.10g} = {resultado:.10g}"
 
 #=====        Exibir Resultado        =====
 def mostrar_resultado(numero1, numero2, operacao, resultado):
