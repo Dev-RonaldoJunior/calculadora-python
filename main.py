@@ -34,7 +34,7 @@ def mostrar_menu():
 def main():
     #==============================APRESENTAÇÃO==============================
     print("\n===== CALCULADORA BASICA =====")
-    print("=====        V1.33.0        =====")
+    print("=====        V1.34.0        =====")
 
     #==============================LISTA PARA HISTÓRICO DE CALCULOS==============================
     lista_historico = []
@@ -64,19 +64,17 @@ def main():
 
         #==============================INPUT DOS NÚMEROS==============================
         numero1 = entradas.input_numero("\nDigite o primeiro número: ")
-        numero2 = entradas.input_numero("\nDigite o segundo número: ")
-
-        #==============================TRATAMENTO DE DIVISÃO POR ZERO==============================
-        if operacao == "4" and numero2 == 0:
-            print("\nNão é possível dividir por zero")
-            continue
+        numero2 = entradas.input_numero("Digite o segundo número: ")
 
         #==============================REALIZAR CÁLCULO==============================
-        resultado = realizar_calculo(operacao, numero1, numero2)
+        try:
+            resultado = realizar_calculo(operacao, numero1, numero2)
+        except ZeroDivisionError as erro:
+            print(f"\n{erro}")
+            continue
 
         #==============================EXIBIR RESULTADO==============================
         resultado_formatado = apresentacao.formatar_resultado(numero1, numero2, operacao, resultado)
-
         print(resultado_formatado)
 
         #==============================ADICIONAR AO HISTÓRICO==============================

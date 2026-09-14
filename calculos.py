@@ -12,6 +12,8 @@ def multiplicar(n1, n2):
 
 #=====        Função de Divisão        =====
 def dividir(n1, n2):
+    if n2 == 0:
+        raise ZeroDivisionError("Não é possível dividir por zero")
     return n1 / n2
 
 #=====        Função de Porcentagem        =====
