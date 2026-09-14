@@ -2,8 +2,6 @@
 import calculos, historico, entradas, validacoes, apresentacao
 
 #==============================CONSTANTE==============================
-OPERACOES_VALIDAS = ["1", "2", "3", "4", "5", "6"]
-
 OPERACOES_CALCULO = {
     "1": calculos.somar,
     "2": calculos.subtrair,
@@ -34,7 +32,7 @@ def mostrar_menu():
 def main():
     #==============================APRESENTAÇÃO==============================
     print("\n===== CALCULADORA BASICA =====")
-    print("=====        V1.35.0        =====")
+    print("=====        V1.36.0        =====")
 
     #==============================LISTA PARA HISTÓRICO DE CALCULOS==============================
     lista_historico = []
@@ -58,7 +56,7 @@ def main():
             continue
 
         #==============================VERIFICAÇÃO DA OPERAÇÃO==============================
-        if not validacoes.validar_operacao(operacao, OPERACOES_VALIDAS):
+        if not validacoes.validar_operacao(operacao, OPERACOES_CALCULO):
             print("\nOpção inválida!")
             continue
 
