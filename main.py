@@ -3,36 +3,31 @@ import calculos, historico, entradas, validacoes, apresentacao
 
 #==============================CONSTANTE==============================
 OPERACOES_CALCULO = {
-    "1": calculos.somar,
-    "2": calculos.subtrair,
-    "3": calculos.multiplicar,
-    "4": calculos.dividir,
-    "5": calculos.porcentagem,
-    "6": calculos.potencia
+    "1": ("Soma", calculos.somar),
+    "2": ("Subtração", calculos.subtrair),
+    "3": ("Multiplicação", calculos.multiplicar),
+    "4": ("Divisão", calculos.dividir),
+    "5": ("Porcentagem", calculos.porcentagem),
+    "6": ("Potência", calculos.potencia)
 }
 
 #==============================FUNÇÕES==============================                    
 #=====        Calcular        =====
 def realizar_calculo(operacao, numero1, numero2):
-    return OPERACOES_CALCULO[operacao](numero1, numero2)
+    return OPERACOES_CALCULO[operacao][1](numero1, numero2)
 
 #=====        Mostrar Menu        =====
 def mostrar_menu():
-    print("\nEscolha uma operação:")
-    print("0 - Fechar Calculadora")
-    print("1 - Soma")
-    print("2 - Subtração")
-    print("3 - Multiplicação")
-    print("4 - Divisão")
-    print("5 - Porcentagem")
-    print('6 - Potência')
-    print("7 - Histórico")
+    print("\n0 - Encerrar Calculadora")
+    for numero, dados in OPERACOES_CALCULO.items():
+        print(f"{numero} - {dados[0]}")
+    print("7 - Historico")
 
 #=====        Função Principal       =====
 def main():
     #==============================APRESENTAÇÃO==============================
     print("\n===== CALCULADORA BASICA =====")
-    print("=====        V1.36.0        =====")
+    print("=====        V1.37.0       =====")
 
     #==============================LISTA PARA HISTÓRICO DE CALCULOS==============================
     lista_historico = []
