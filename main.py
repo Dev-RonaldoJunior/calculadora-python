@@ -34,7 +34,7 @@ def mostrar_menu():
 def main():
     #==============================APRESENTAÇÃO==============================
     print("\n===== CALCULADORA BASICA =====")
-    print("=====        V1.34.0        =====")
+    print("=====        V1.35.0        =====")
 
     #==============================LISTA PARA HISTÓRICO DE CALCULOS==============================
     lista_historico = []
@@ -74,11 +74,10 @@ def main():
             continue
 
         #==============================EXIBIR RESULTADO==============================
-        resultado_formatado = apresentacao.formatar_resultado(numero1, numero2, operacao, resultado)
-        print(resultado_formatado)
-
+        resultado_final = apresentacao.mostrar_resultado(numero1, numero2, operacao, resultado)
+        
         #==============================ADICIONAR AO HISTÓRICO==============================
-        lista_historico.append(resultado_formatado)
+        lista_historico.append(resultado_final)
 
 #=======================================================================================================================================================#
 #=================================================================CALCULADORA FUNCIONANDO===============================================================#

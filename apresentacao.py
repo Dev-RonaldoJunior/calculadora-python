@@ -20,4 +20,6 @@ def formatar_resultado(numero1, numero2, operacao, resultado):
 
 #=====        Exibir Resultado        =====
 def mostrar_resultado(numero1, numero2, operacao, resultado):
-    print(formatar_resultado(numero1, numero2, operacao, resultado))
+    resultado_formatado = formatar_resultado(numero1, numero2, operacao, resultado)
+    print (resultado_formatado)
+    return resultado_formatado
