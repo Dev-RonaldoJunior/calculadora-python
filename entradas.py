@@ -10,8 +10,9 @@ def input_numero(mensagem):
             print("\nValor digitado invalido!")
             print("Digite apenas números.")
 
-#=====        Input de Confirmarção para apagar historico        =====
+#=====        Input de Confirmação       =====
 def confirmar_acao(mensagem):
+
     while True:
         print(f"\n{mensagem}")
         print("S para Sim e N para Não")
@@ -21,11 +22,22 @@ def confirmar_acao(mensagem):
         #Positivo
         if operacao == "S":
             return True
-            
+
         #Negativo
         elif operacao == "N":
             return False
-            
+
         #Invalido
         else:
-            print("Opção inválida!")
+            print("\nOpção inválida!")
+
+#=====        Input de Opção       =====
+def input_opcao(mensagem, opcoes_validas):
+
+    while True:
+        opcao = input(mensagem)
+
+        if opcao in opcoes_validas:
+            return opcao
+
+        print("\nOpção inválida!")

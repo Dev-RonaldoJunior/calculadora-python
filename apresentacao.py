@@ -1,6 +1,7 @@
+#==============================IMPORT==============================
 from operacoes import OPERACOES_CALCULO
 
-
+#==============================FUNÇÕES==============================
 #=====        Símbolo da Operação        =====
 def simbolo_operacao(operacao):
     return OPERACOES_CALCULO[operacao]["simbolo"]
