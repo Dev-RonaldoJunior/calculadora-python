@@ -10,7 +10,7 @@ def mostrar_historico(historico):
 #=====        Limpar Histórico        =====
 def limpar_historico(historico):
     print("\nTem certeza que deseja apagar o histórico da calculadora?")
-    print("S para sim e N para Não")
+    print("S para Sim e N para Não")
     
 
     while True:
