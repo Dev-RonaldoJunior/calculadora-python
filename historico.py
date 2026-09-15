@@ -1,3 +1,5 @@
+import entradas
+
 #=====        Mostrar Histórico       =====
 def mostrar_historico(historico):
     if not historico:
@@ -13,28 +15,19 @@ def limpar_historico(historico):
     if not historico:
         print("\nNenhum cálculo para apagar.")
         return
-    
-    while True:
-        print("\nTem certeza que deseja apagar o histórico da calculadora?")
-        print("S para Sim e N para Não")
 
-        operacao = input("Opção: ")
-        operacao = operacao.upper()
+    confirmar = entradas.confirmar_acao(
+        "Tem certeza que deseja apagar o historico da calculadora?"
+    )
 
-        #Positivo
-        if operacao == "S":
-            historico.clear()
-            print("Histórico Limpo.")
-            break
+    #Positivo
+    if confirmar:
+        historico.clear()
+        print("\nHistórico Limpo.")
 
-        #Negativo
-        elif operacao == "N":
-            print("\nHistórico não apagado")
-            break
-
-        #Invalido
-        else:
-            print("\nOpção inválida!")
+    #Negativo
+    else:
+        print("\nHistórico não apagado")
 
 #=====        Sub Menu do Histórico        =====
 def menu_historico(historico):
@@ -46,7 +39,7 @@ def menu_historico(historico):
         print("0 - Voltar")
 
         #==============================INPUT DA OPÇÃO DO HISTÓRICO==============================
-        operacao2 = input("\nOpção: ")
+        operacao2 = input("Opção: ")
 
         if operacao2 == "1":
             mostrar_historico(historico)

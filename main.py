@@ -27,7 +27,7 @@ def main():
         mostrar_menu()
 
         #==============================INPUT DA OPÇÃO DE FUNÇÃO==============================
-        operacao = input("\nOpção: ")
+        operacao = input("Opção: ")
 
         #==============================FECHAR A CALCULADORA==============================
         if operacao == "0":
