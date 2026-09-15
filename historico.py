@@ -9,14 +9,18 @@ def mostrar_historico(historico):
 
 #=====        Limpar Histórico        =====
 def limpar_historico(historico):
-    print("\nTem certeza que deseja apagar o histórico da calculadora?")
-    print("S para Sim e N para Não")
-    
 
+    if not historico:
+        print("\nNenhum cálculo para apagar.")
+        return
+    
     while True:
+        print("\nTem certeza que deseja apagar o histórico da calculadora?")
+        print("S para Sim e N para Não")
+
         operacao = input("Opção: ")
-        
         operacao = operacao.upper()
+
         #Positivo
         if operacao == "S":
             historico.clear()
