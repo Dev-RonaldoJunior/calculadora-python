@@ -34,20 +34,21 @@ def limpar_historico(historico):
 
 #=====        Sub Menu do Histórico        =====
 def menu_historico(historico):
-    #==============================SUB MENU==============================
-    print("\n1 - Ver histórico")
-    print("2 - Limpar Histórico")
 
     while True:
+        #==============================SUB MENU==============================
+        print("\n1 - Ver histórico")
+        print("2 - Limpar Histórico")
+        print("0 - Voltar")
 
         #==============================INPUT DA OPÇÃO DO HISTÓRICO==============================
         operacao2 = input("\nOpção: ")
 
         if operacao2 == "1":
             mostrar_historico(historico)
-            break
-        elif operacao2 =="2":
+        elif operacao2 == "2":
             limpar_historico(historico)
+        elif operacao2 == "0":
             break
         else:
             print("Opção inválida!")
