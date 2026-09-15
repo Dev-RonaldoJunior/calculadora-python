@@ -1,15 +1,9 @@
-SIMBOLOS_OPERACOES = {
-    "1": "+",
-    "2": "-",
-    "3": "x",
-    "4": "÷",
-    "5": "%",
-    "6": "^"
-}
+from operacoes import OPERACOES_CALCULO
+
 
 #=====        Símbolo da Operação        =====
 def simbolo_operacao(operacao):
-    return SIMBOLOS_OPERACOES[operacao]
+    return OPERACOES_CALCULO[operacao]["simbolo"]
 
 #=====        Formatar Resultado        =====
 def formatar_resultado(numero1, numero2, operacao, resultado):

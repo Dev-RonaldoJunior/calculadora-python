@@ -1,43 +1,15 @@
 #==============================IMPORT==============================
-import calculos, historico, entradas, validacoes, apresentacao
-
-#==============================CONSTANTE==============================
-OPERACOES_CALCULO = {
-    "1": {
-        "nome": "Soma",
-        "funcao": calculos.somar
-    },
-    "2": {
-        "nome": "Subtração",
-        "funcao": calculos.subtrair
-    },
-    "3": {
-        "nome": "Multiplicação",
-        "funcao": calculos.multiplicar
-    },
-    "4": {
-        "nome": "Divisão",
-        "funcao": calculos.dividir
-    },
-    "5": {
-        "nome": "Porcentagem",
-        "funcao": calculos.porcentagem
-    },
-    "6": {
-        "nome": "Potência",
-        "funcao": calculos.potencia
-    }
-}
+import historico, entradas, validacoes, apresentacao, operacoes
 
 #==============================FUNÇÕES==============================                    
 #=====        Calcular        =====
 def realizar_calculo(operacao, numero1, numero2):
-    return OPERACOES_CALCULO[operacao]["funcao"](numero1, numero2)
+    return operacoes.OPERACOES_CALCULO[operacao]["funcao"](numero1, numero2)
 
 #=====        Mostrar Menu        =====
 def mostrar_menu():
     print("\n0 - Encerrar Calculadora")
-    for numero, dados in OPERACOES_CALCULO.items():
+    for numero, dados in operacoes.OPERACOES_CALCULO.items():
         print(f"{numero} - {dados['nome']}")
     print("7 - Historico")
 
@@ -45,7 +17,7 @@ def mostrar_menu():
 def main():
     #==============================APRESENTAÇÃO==============================
     print("\n===== CALCULADORA BASICA =====")
-    print("=====        V1.38.0       =====")
+    print("=====        V1.39.0       =====")
 
     #==============================LISTA PARA HISTÓRICO DE CALCULOS==============================
     lista_historico = []
@@ -69,7 +41,7 @@ def main():
             continue
 
         #==============================VERIFICAÇÃO DA OPERAÇÃO==============================
-        if not validacoes.validar_operacao(operacao, OPERACOES_CALCULO):
+        if not validacoes.validar_operacao(operacao, operacoes.OPERACOES_CALCULO):
             print("\nOpção inválida!")
             continue
 
