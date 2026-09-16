@@ -8,19 +8,15 @@ def realizar_calculo(operacao, numeros):
 
 #=====        Mostrar Menu        =====
 def mostrar_menu():
-    print("\n0 - Encerrar Calculadora")
+    print("0 - Encerrar Calculadora")
 
     for numero, dados in operacoes.OPERACOES_CALCULO.items():
         print(f"{numero} - {dados['nome']}")
 
-    print("8 - Historico")
+    print("8 - Histórico")
 
 #=====        Função Principal       =====
 def main():
-
-    #==============================APRESENTAÇÃO==============================
-    print("\n===== CALCULADORA BASICA =====")
-
     #==============================LISTA PARA HISTÓRICO DE CALCULOS==============================
     lista_historico = []
 
@@ -30,10 +26,16 @@ def main():
     #==============================LOOP==============================
     while True:
 
+    #==============================APRESENTAÇÃO==============================
+        print("\n==============================")
+        print("========MENU PRINCIPAL========")
+        print("==============================")
         mostrar_menu()
+        print("==============================")
 
         #==============================INPUT DA OPÇÃO DE FUNÇÃO==============================
         operacao = entradas.input_opcao("Opção: ", opcoes_menu)
+        print("==============================")
 
         #==============================FECHAR A CALCULADORA==============================
         if operacao == "0":
@@ -50,18 +52,27 @@ def main():
 
         numeros = []
 
+        print("\n==============================")
+        print("===========CÁLCULO============")
+        print("==============================")
         for numero in range(quantidade_numeros):
 
             if quantidade_numeros == 1:
-                mensagem = "\nDigite o número: "
+                mensagem = "Digite o número: "
+
 
             else:
                 if numero == 0:
-                    mensagem = "\nDigite o primeiro número: "
+                    mensagem = "Digite o primeiro número: "
                 else:
                     mensagem = "Digite o segundo número: "
 
+
             numeros.append(entradas.input_numero(mensagem))
+
+        print("==============================")
+        print("==========RESULTADO===========")
+        print("==============================")
 
         #==============================REALIZAR CÁLCULO==============================
         try:
@@ -83,15 +94,20 @@ def main():
         else:
             numero2 = None
 
-        resultado_final = apresentacao.mostrar_resultado(
+        apresentacao.mostrar_resultado(
             numero1,
             numero2,
             operacao,
             resultado
         )
-
+        print("==============================")
         #==============================ADICIONAR AO HISTÓRICO==============================
-        lista_historico.append(resultado_final)
+        lista_historico.append({
+            "numero1": numero1,
+            "numero2": numero2,
+            "operacao": operacao,
+            "resultado": resultado
+        })
 
 
 #=======================================================================================================================================================#

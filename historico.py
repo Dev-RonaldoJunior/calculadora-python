@@ -1,6 +1,5 @@
 #==============================IMPORT==============================
-import entradas
-
+import entradas, apresentacao
 #==============================FUNÇÕES==============================
 #=====        Mostrar Histórico       =====
 def mostrar_historico(historico):
@@ -10,11 +9,20 @@ def mostrar_historico(historico):
 
     else:
         numero_item = 1
-        print("\n==== Historico ====")
+
+        print("\n==============================")
+        print("==========HISTÓRICO===========")
+        print("==============================")
+
         for item in historico:
-            print(f"{numero_item} - {item}")
-            numero_item +=1
-        print("===================")
+            print(
+                f"{numero_item}º Calculo: "
+                f"{apresentacao.formatar_resultado(item)}"
+            )
+
+            numero_item += 1
+
+        print("==============================")
 
 #=====        Limpar Histórico        =====
 def limpar_historico(historico):
@@ -45,12 +53,17 @@ def menu_historico(historico):
     while True:
 
         #==============================SUB MENU==============================
-        print("\n1 - Ver histórico")
+        print("\n==============================")
+        print("========MENU HISTÓRICO========")
+        print("==============================")
+        print("1 - Ver histórico")
         print("2 - Limpar Histórico")
         print("0 - Voltar")
+        print("==============================")
 
         #==============================INPUT DA OPÇÃO DO HISTÓRICO==============================
         operacao = entradas.input_opcao("Opção: ", opcoes_menu)
+        print("==============================")
 
         if operacao == "1":
             mostrar_historico(historico)
