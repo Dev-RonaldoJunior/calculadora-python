@@ -23,3 +23,9 @@ def porcentagem(n1, n2):
 #=====        Função de Potência       =====
 def potencia(n1, n2):
     return n1 ** n2
+
+#=====        Função de Raiz Quadrada      =====
+def raiz(n1):
+    if n1 < 0:
+        raise ValueError ("Não é possível calcular a raiz quadrada de um número negativo")
+    return n1 ** 0.5

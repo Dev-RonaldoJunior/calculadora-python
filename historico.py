@@ -9,8 +9,12 @@ def mostrar_historico(historico):
         print("\nNenhum cálculo realizado.")
 
     else:
+        numero_item = 1
+        print("\n==== Historico ====")
         for item in historico:
-            print(item)
+            print(f"{numero_item} - {item}")
+            numero_item +=1
+        print("===================")
 
 #=====        Limpar Histórico        =====
 def limpar_historico(historico):
