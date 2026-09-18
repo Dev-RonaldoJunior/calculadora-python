@@ -37,7 +37,9 @@ def modulo(n1, n2):
 #=====        Função de Fatorial     =====
 def fatorial(n1):
     if n1 < 0 or n1 != int(n1):
-        raise ValueError ("Valores negativos ou decimais não são aceitos!")
+        raise ValueError("Valores negativos ou decimais não são aceitos!")
+    elif n1 > 1000:
+        raise ValueError("O valor máximo para o fatorial é 1000")
     elif n1 == 0 or n1 == 1:
         return 1
     else:
