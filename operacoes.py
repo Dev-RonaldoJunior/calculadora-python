@@ -52,5 +52,13 @@ OPERACOES_CALCULO = {
         "funcao": calculos.raiz,
         "formato": "raiz",
         "quantidade_numeros": 1
-    }  
+    },
+
+    "8": {
+        "nome": "Módulo",
+        "simbolo": "mod",
+        "funcao": calculos.modulo,
+        "formato": "modulo",
+        "quantidade_numeros": 2
+    } 
 }

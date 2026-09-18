@@ -13,7 +13,7 @@ def mostrar_menu():
     for numero, dados in operacoes.OPERACOES_CALCULO.items():
         print(f"{numero} - {dados['nome']}")
 
-    print("8 - Histórico")
+    print("9 - Histórico")
 
 #=====        Função Principal       =====
 def main():
@@ -21,7 +21,7 @@ def main():
     lista_historico = []
 
     #==============================OPÇÕES DO MENU==============================
-    opcoes_menu = ["0", *operacoes.OPERACOES_CALCULO.keys(), "8"]
+    opcoes_menu = ["0", *operacoes.OPERACOES_CALCULO.keys(), "9"]
 
     #==============================LOOP==============================
     while True:
@@ -43,7 +43,7 @@ def main():
             break
 
         #==============================HISTÓRICO==============================
-        elif operacao == "8":
+        elif operacao == "9":
             historico.menu_historico(lista_historico)
             continue
 
