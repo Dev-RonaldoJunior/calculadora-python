@@ -40,4 +40,8 @@ def fatorial(n1):
         raise ValueError ("Valores negativos ou decimais não são aceitos!")
     elif n1 == 0 or n1 == 1:
         return 1
-    return n1 * fatorial(n1 - 1)
+    else:
+        resultado = 1
+        for i in range(1, int(n1) + 1):
+            resultado *= i
+        return resultado
