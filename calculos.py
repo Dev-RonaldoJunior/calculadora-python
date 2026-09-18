@@ -33,4 +33,11 @@ def raiz(n1):
 #=====        Função de Módulo     =====
 def modulo(n1, n2):
     return n1 % n2
- 
+
+#=====        Função de Fatorial     =====
+def fatorial(n1):
+    if n1 < 0 or n1 != int(n1):
+        raise ValueError ("Valores negativos ou decimais não são aceitos!")
+    elif n1 == 0 or n1 == 1:
+        return 1
+    return n1 * fatorial(n1 - 1)

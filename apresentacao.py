@@ -4,9 +4,8 @@ from operacoes import OPERACOES_CALCULO
 
 #=====        Formatar Resultado        =====
 def formatar_resultado(item):
-
+    #=====        Tratamento para Porcentagem     =====
     if OPERACOES_CALCULO[item["operacao"]]["formato"] == "porcentagem":
-
         return (
             f"{item['numero1']:.10g}"
             f"{OPERACOES_CALCULO[item['operacao']]['simbolo']} de "
@@ -14,16 +13,24 @@ def formatar_resultado(item):
             f"{item['resultado']:.10g}"
         )
 
+    #=====        Tratamento para Raiz     =====
     elif OPERACOES_CALCULO[item["operacao"]]["formato"] == "raiz":
-
         return (
             f"{OPERACOES_CALCULO[item['operacao']]['simbolo']}"
             f"{item['numero1']:.10g} = "
             f"{item['resultado']:.10g}"
         )
 
+    #=====        Tratamento para Fatorial     =====
+    elif OPERACOES_CALCULO[item["operacao"]]["formato"] == "fatorial":
+        return(
+            f"{item['numero1']:.10g}"
+            f"{OPERACOES_CALCULO[item['operacao']]['simbolo']} = "
+            f"{item['resultado']:.10g}"
+        )
+ 
+    #=====        Tratamento para calculos basicos     =====
     else:
-
         return (
             f"{item['numero1']:.10g} "
             f"{OPERACOES_CALCULO[item['operacao']]['simbolo']} "

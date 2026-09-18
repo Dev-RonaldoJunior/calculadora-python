@@ -60,5 +60,13 @@ OPERACOES_CALCULO = {
         "funcao": calculos.modulo,
         "formato": "modulo",
         "quantidade_numeros": 2
-    } 
+    },
+
+    "9": {
+        "nome": "Fatorial",
+        "simbolo": "!",
+        "funcao": calculos.fatorial,
+        "formato": "fatorial",
+        "quantidade_numeros": 1
+    }
 }
