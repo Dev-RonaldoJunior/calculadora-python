@@ -19,7 +19,7 @@ OPERACOES_CALCULO = {
     },
     "3": {
         "nome": "Multiplicação",
-        "simbolo": "x",
+        "simbolo": "×",
         "funcao": calculos.multiplicar,
         "formato": "multiplicar",
         "quantidade_numeros": 2
