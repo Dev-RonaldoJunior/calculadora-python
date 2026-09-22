@@ -8,30 +8,52 @@ def adicionar_numero(numero, visor):
 
 #=====        Adiciona o Operador no Visor       =====
 def adicionar_operador(operador, visor):
-    visor.insert(tk.END, operador)
+    expressao = visor.get()
+
+    if not expressao:
+        return
+
+    if expressao[-1] in ["+", "-", "×", "÷", "%"]:
+        visor.delete(0, tk.END)
+        visor.insert(tk.END, expressao[:-1] + operador)
+    else:
+        visor.insert(tk.END, operador)
 
 #=====        Realiza o Cálculo       =====
 def calcular(visor):
     expressao = visor.get()
 
+    if not expressao:
+        return
+
     for operador in ["+", "-", "×", "÷", "%"]:
+
         if operador in expressao:
-            print("Operador:", operador)
 
             partes = expressao.split(operador)
+
+            if partes[0] == "" or partes[1] == "":
+                return
 
             numero1 = float(partes[0])
             numero2 = float(partes[1])
 
-            print("Número 1:", numero1)
-            print("Número 2:", numero2)
-
             for codigo, dados in operacoes.OPERACOES_CALCULO.items():
+
                 if dados["simbolo"] == operador:
-                    resultado = dados["funcao"](numero1, numero2)
+
+                    try:
+                        resultado = dados["funcao"](numero1, numero2)
+                    except ZeroDivisionError:
+                        visor.delete(0, tk.END)
+                        visor.insert(tk.END, "Divisão por zero")
+                        return
 
                     visor.delete(0, tk.END)
                     visor.insert(tk.END, resultado)
+
+                    visor.icursor(tk.END)
+                    visor.focus()
 
                     break
 
@@ -87,9 +109,42 @@ def abrir_menu(botao_menu):
         f"+{botao_menu.winfo_rooty() + botao_menu.winfo_height()}"
     )
 
+#=====        Apaga tudo no visor       =====
+def limpar_visor(visor):
+    visor.delete(0, tk.END)
+
+#=====        Apaga o Último Caractere       =====
+def apagar_caractere(visor):
+    expressao = visor.get()
+
+    visor.delete(0, tk.END)
+    visor.insert(tk.END, expressao[:-1])
+
+#=====        Adiciona Decimal no Visor       =====
+def adicionar_decimal(visor):
+    expressao = visor.get()
+
+    if not expressao:
+        visor.insert(tk.END, "0.")
+        return
+
+    operadores = ["+", "-", "×", "÷", "%"]
+
+    numero_atual = expressao
+
+    for operador in operadores:
+        if operador in expressao:
+            numero_atual = expressao.split(operador)[-1]
+            break
+
+    if "." not in numero_atual:
+        visor.insert(tk.END, ".")
+
 #=====        Cria a Interface Completa        =====
 def iniciar_interface():
     janela = tk.Tk()
+
+    resultado_exibido = False
 
     janela.title("Calculadora")
     janela.geometry("400x550")
@@ -201,8 +256,14 @@ def iniciar_interface():
                 comando = lambda texto=texto: adicionar_operador(texto, visor)
             elif texto == "=":
                 comando = lambda: calcular(visor)
-            elif texto in ["AC", "⌫", "🧪"]:
+            elif texto == "AC":
+                comando = lambda: limpar_visor(visor)
+            elif texto == "⌫":
+                comando = lambda: apagar_caractere(visor)
+            elif texto == "🧪":
                 comando = lambda: None
+            elif texto == ".":
+                comando = lambda: adicionar_decimal(visor)
             else:
                 comando = lambda texto=texto: adicionar_numero(texto, visor)
 
