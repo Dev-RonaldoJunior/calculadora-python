@@ -37,12 +37,63 @@ def calcular(visor):
 
             break
 
+#=====        Abre o menu       =====
+def abrir_menu(botao_menu):
+
+    menu = tk.Toplevel(botao_menu)
+
+    menu.overrideredirect(True)
+    menu.configure(
+        bg="#FFD700"
+    )
+
+    frame_menu = tk.Frame(
+        menu,
+        bg="#101010",
+        bd=0
+    )
+    frame_menu.pack(
+        padx=1,
+        pady=1
+    )
+
+    opcoes = ["📜 - Histórico", "📅 - Data", "🛈 - Sobre"]
+
+    for opcao in opcoes:
+        botao = tk.Button(
+            frame_menu,
+            text=opcao,
+            bg="#101010",
+            fg="#FFFFFF",
+            activebackground="#303030",
+            activeforeground="#FFD700",
+            font=("Arial", 11),
+            relief="flat",
+            bd=0,
+            width=18,
+            anchor="w",
+            padx=10
+        )
+
+        botao.pack(
+            fill="x",
+            pady=1
+        )
+
+    menu.update_idletasks()
+
+    menu.geometry(
+        f"+{botao_menu.winfo_rootx() - menu.winfo_width() + botao_menu.winfo_width()}"
+        f"+{botao_menu.winfo_rooty() + botao_menu.winfo_height()}"
+    )
+
 #=====        Cria a Interface Completa        =====
 def iniciar_interface():
     janela = tk.Tk()
 
     janela.title("Calculadora")
     janela.geometry("400x550")
+    janela.minsize(400, 550)
     janela.configure(bg="#202020")
 
     botao_calculadora = tk.Button(
@@ -77,6 +128,7 @@ def iniciar_interface():
     botao_menu = tk.Button(
         janela,
         text="☰",
+        command=lambda: abrir_menu(botao_menu),
         bg="#202020",
         fg="#FFD700",
         font=("Arial", 16, "bold"),
@@ -102,19 +154,20 @@ def iniciar_interface():
 
     visor = tk.Entry(
         janela,
-        font=("Courier New", 28),
+        font=("Courier New", 26),
         bg="#050505",
         fg="#39FF14",
         insertbackground="#39FF14",
         justify="right",
         bd=0,
-        highlightthickness=0
+        highlightthickness=0,
+#        state="readonly"
         )
     visor.grid(
         row=1,
         column=0,
         columnspan=4,
-        padx=10,
+        padx=15,
         pady=(10, 5),
         sticky="nsew"
         )
@@ -141,7 +194,7 @@ def iniciar_interface():
 
     operadores = ["+", "-", "×", "÷", "%"]
 
-    for linha, botoes_linha in enumerate(botoes, start=2 ):
+    for linha, botoes_linha in enumerate(botoes, start=2):
         for coluna, texto in enumerate(botoes_linha):
 
             if texto in operadores:
@@ -172,12 +225,30 @@ def iniciar_interface():
                     activebackground="#303030"
                 )
 
+            if texto == "AC":
+                botao.configure(
+                    fg="#FFD700",
+                    activebackground="#303030"
+                )
+
             if texto == "=":
                 botao.configure(
                     bg="#FFD700",
                     fg="#101010",
                     activebackground="#FFFFFF",
                     activeforeground="#101010"
+                )
+
+            if texto =="⌫":
+                botao.configure(
+                    fg="#FFFFFF",
+                    activeforeground="#FFD700"
+                )
+
+            if texto == "🧪":
+                botao.configure(
+                    fg="#FFD700",
+                    activebackground="#303030"
                 )
 
             botao.grid(
